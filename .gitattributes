@@ -1,0 +1,2 @@
+# Keep tldrq media as plain git blobs (not LFS) so the public snapshot carries real files.
+docs/media/** !filter !diff !merge binary

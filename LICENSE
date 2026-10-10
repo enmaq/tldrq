@@ -1,0 +1,117 @@
+tldrq End User License Agreement
+
+Effective date: 10 October 2026
+
+The terms on which you may use tldrq: what the licence covers, what you are
+responsible for, who owns what, and the limits of what we promise. Plain
+language on purpose. These terms follow the ENMAQ End User License Agreement
+(https://app.enmaq.com/eula); where this page is silent, that agreement applies.
+
+1. Licence grant and restrictions
+
+This agreement is between you and Enmaq, a stock corporation organized under
+the laws of the State of California (California Secretary of State entity
+number B20260200568), which publishes tldrq. By downloading, installing or
+using tldrq you accept these terms. If you are accepting on behalf of an
+organization, you confirm you are authorized to bind it.
+
+Subject to these terms, we grant you a personal, non-exclusive,
+non-transferable, revocable licence to install and use the tldrq binaries
+published by Enmaq, free of charge, for your own work and your organization's
+work. Features that run on Enmaq servers (shared Teams across machines, hosted
+agents, voice, missions and similar) may require an ENMAQ account and a paid
+plan, and are governed by the ENMAQ agreement. Where your organization has a
+separate written agreement with us, that agreement governs wherever it differs
+from this page.
+
+You may not:
+
+- copy, sell, sublicense, rent or redistribute tldrq binaries, except by
+  pointing others to our official download;
+- reverse engineer, decompile or disassemble tldrq, except where that right
+  cannot lawfully be restricted;
+- remove, obscure or alter any notice of ownership, patent, trademark or
+  authorship;
+- use tldrq to build a competing product, or extract its content at scale by
+  automated means without our written permission;
+- circumvent or interfere with any licence check, plan limit, access control,
+  quota, rate limit or security measure.
+
+2. Your code and your content
+
+Your code stays yours. tldrq runs on your machine and works on your
+repositories, notes and conversations; we claim no ownership of any of it.
+Local features keep their data on your machine. When you use a server feature,
+you grant us only the permission we need to run it for you, and we do not use
+your content to train models for other customers, and we do not sell it.
+
+You are responsible for the agents and models you run through tldrq, for the
+commands they execute on your systems, and for having the right to the code
+and data you give them.
+
+3. Accounts
+
+If you sign in, you are responsible for everything done under your account and
+your API keys. Keep them private. Tell us at contact@enmaq.com as soon as you
+suspect unauthorized access.
+
+4. Acceptable use
+
+You agree not to use tldrq to break the law or help someone else break it, to
+gain unauthorized access to any system or account, to distribute malware, or
+to place a load on Enmaq services designed to degrade them. We may suspend or
+terminate access to server features that breaches this section.
+
+5. Patents and intellectual property notice
+
+Patent Pending - U.S. App. Nos. 64/125,948 & 64/125,957.
+
+tldrq(TM) and ENMAQ(TM) are trademarks of Enmaq. We own tldrq itself: the
+software, its interfaces, its documentation and its names and marks. Your
+licence grants you no licence, express or implied, under any patent,
+trademark, copyright or trade secret of ours beyond what is necessary to use
+tldrq as intended. The book in this repository is licensed separately, as
+stated in book/README.md.
+
+6. Disclaimers and limitation of liability
+
+tldrq is provided as is. To the fullest extent the law allows, we disclaim all
+warranties, express or implied, including merchantability, fitness for a
+particular purpose and non-infringement. We do not warrant that tldrq will be
+uninterrupted or error-free, or that any result it or any agent produces is
+accurate or complete. Review what agents change before you rely on it, and
+keep your own copies and backups of anything you cannot afford to lose.
+
+To the fullest extent the law allows, we are not liable for indirect,
+incidental, special, consequential or punitive damages, or for lost profits,
+lost revenue or lost data. Where liability cannot be excluded, our total
+liability arising out of or relating to tldrq is limited to the greater of the
+amount you paid us for tldrq in the twelve months before the claim, or one
+hundred United States dollars. Some jurisdictions do not allow certain
+exclusions or limitations, in which case those parts do not apply to you and
+the rest stands.
+
+7. Termination
+
+You may stop using tldrq at any time by deleting it. We may terminate your
+licence if you breach these terms or if we are required to by law. On
+termination your licence ends immediately and you must delete the binaries.
+
+8. Governing law
+
+These terms are governed by the laws of the State of California, USA, without
+regard to its conflict-of-laws rules. The state and federal courts located in
+San Diego County, California have exclusive jurisdiction over any dispute
+arising out of these terms, subject to any mandatory rights you have under the
+law of your own country of residence.
+
+9. Changes
+
+We may update these terms as tldrq changes. The effective date at the top
+always reflects the current version. Continuing to use tldrq after a change
+takes effect means you accept it; if you do not, stop using it and delete it.
+
+10. Contact
+
+Enmaq, 12520 High Bluff Drive, Suite 240, San Diego, California 92130, USA.
+contact@enmaq.com
