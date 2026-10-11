@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.208] - 2026-10-11
+
+- Fixed: forming a Team over the free agent cap now opens the same yellow Upgrade sheet as adding an agent, instead of a plain "Team not formed" notice.
+
 ## [0.26.207] - 2026-10-11
 
 - Added: release builds enforce the free 3-agent / 1-Team cap; production signed licences lift it for subscribers and owners, with offline grace and safe Reopen.
