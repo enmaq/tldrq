@@ -2,6 +2,42 @@
 
 User-facing changes only. The format follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [Unreleased]
+
+## [0.26.207] - 2026-10-11
+
+- Added: release builds enforce the free 3-agent / 1-Team cap; production signed licences lift it for subscribers and owners, with offline grace and safe Reopen.
+- Fixed: `tldrq playbook use` now prints why it refused (agent session, no terminal) and names an unnamed signer by its short key; `playbook show` labels the pinned download hash and the canonical content hash.
+
+## [0.26.206] - 2026-10-11
+
+- Added: `tldrq playbook use URL|PATH` installs or updates a signed playbook after showing its rules diff; only a human approves (an agent's command cannot), and an installed file that was edited afterwards is not loaded.
+- Added: Ed25519 playbook signing and explicit workspace key trust; invalid or untrusted signatures are refused, and `show` reports the canonical content hash.
+- Added: tldrq excludes generated `.tldrq` runtime files through Git-local `info/exclude`; canvas pages and deletion history remain shared content, while canvas lock files, drafts, and live files stay out of status.
+
+## [0.26.205] - 2026-10-11
+
+- Fixed: An immediately exiting reopened member retains a visible failed-to-restart card and saved command; exit publication waits at most two seconds.
+- Added: Canvas address-row maximize toggle, sharing the thread pane controls and Alt+E shortcut.
+- Fixed: after a keyboard like, the status line keeps `LIKED #N` instead of being replaced by the generic `REACTED like` confirmation.
+- Changed: a playbook is now ONE file, `name.playbook` (Lisp manifest + `(rule …)` entries); built-ins and workspace playbooks converted. Old playbook folders still load for one release with a deprecation note.
+
+## [0.26.204] - 2026-10-11
+
+### Fixed
+- Ctrl+\ search no longer hangs on "Indexing…"; a slow search shows a retry.
+- Canvas clicks and typing stay at the displayed cell; Enter inserts a newline, and typing in Threads or Canvas lists filters without reaching the composer.
+- Space Space and the other keyboard likes never remove a like, say which message they reacted to (`LIKED #N`, or `ALREADY LIKED #N`), and follow the pane you are working in: with a thread open beside the chat, the main composer likes the newest channel message.
+- Reopen repairs a withdrawn Codex model when a fresh account model list confirms a supported default; the member card says so.
+
+### Added
+- A channel left open while tldrq is updated now says so: a `⟳ new build` chip in the header and one line `tldrq updated to X, Reopen to apply`, instead of silently running the old build for days.
+
+## [0.26.203] - 2026-10-11
+
+### Changed
+- A thread you open without choosing a message to reply to no longer shows a made-up `> #N` quote row above the composer (replies still go to the thread's first message). The `┄ ┄ ┄` rule above the tabs is gone from every thread and canvas pane next to the chat, not only the maximized ones.
+
 ## [0.26.199] - 2026-10-11
 
 ### Changed
