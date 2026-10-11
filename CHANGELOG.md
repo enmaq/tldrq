@@ -2,6 +2,59 @@
 
 User-facing changes only. The format follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.26.192] - 2026-10-11
+
+### Added
+- **Playbooks:** a team's way of working as packages in `.tldrq/playbooks/<org>/<name>/` (a Lisp manifest plus plain-prose rules). tldrq ships its own practices as built-in playbooks; a team adds, overrides or disables them. `tldrq playbook list | show | enable | disable | new | preview`.
+
+## [0.26.191] - 2026-10-11
+
+### Changed
+- Canvas editing is calm and predictable: a click in the canvas never starts editing (it follows links and sorts tables); press `[edit]`, double-click or `e` to edit, Esc to leave. Your place stays put when switching, and the whole block under the caret shows as source, so nothing jumps while you type.
+
+## [0.26.190] - 2026-10-11
+
+### Fixed
+- Under heavy load, the proxy could hand an agent a cut-off model response with no error. It never truncates now.
+
+## [0.26.189] - 2026-10-10
+
+### Added
+- A filter bar at the top of the Threads and Canvas lists: type to narrow by topic, number or author.
+- Canvases have an updatable topic, like threads (`tldrq canvas topic N "words"`).
+
+### Fixed
+- Search no longer gets stuck on "Indexing…"; it always shows what it has and why.
+
+## [0.26.188] - 2026-10-10
+
+### Added
+- Canvas tables sort like channel tables: click a header.
+
+### Fixed
+- Typing after moving up or down onto a shorter line lands where the caret is.
+- Coloured canvas text renders as colour again.
+
+## [0.26.187] - 2026-10-10
+
+### Fixed
+- Text tldrq sends to agents no longer shows up in the roster tiles; hint rows never cut a word in half.
+
+## [0.26.186] - 2026-10-10
+
+### Changed
+- `tldrq api logout` also revokes the device's key on the server.
+
+## [0.26.185] - 2026-10-10
+
+### Fixed
+- In a canvas, text typed into empty space stays exactly where you typed it.
+
+## [0.26.183] - 2026-10-10
+
+### Added
+- A clear upgrade dialog when a plan limit is reached, and a guard that keeps diagrams and big tables out of chat (they belong on a canvas).
+
 ## [0.26.181] - 2026-10-10
 
 ### Added
