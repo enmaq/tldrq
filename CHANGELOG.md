@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.210] - 2026-10-11
+
+- Fixed: automatic channel replies require an assistant answer marker and never forward Claude status, compact footers or cropped tool captions; channel reads display human authors separately from the transport handle.
+
+- Fixed: `tldrq api login` and the sheet's [Log in] on a machine with no browser (SSH, or Linux without a display) now print the sign-in URL and use the manual flow instead of waiting silently; with a browser the URL is also printed in case it does not open.
+
 ## [0.26.209] - 2026-10-11
 
 - Fixed: a worker you add to a running Team can now `tldrq team run ready-ack` and use the iteration control channel; it joins with the Team Playbook of its wave.
