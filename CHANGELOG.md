@@ -2,6 +2,26 @@
 
 User-facing changes only. The format follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.26.199] - 2026-10-11
+
+### Changed
+- The channel **Iterate** and **Status** buttons now come from playbooks (`enmaq/quick-iterate`, `enmaq/quick-status`), so a team can rewrite them. Status always reports onto the workspace's one canvas whose topic is `Status`, rewritten in place, never a new canvas each time.
+
+## [0.26.198] - 2026-10-11
+
+### Changed
+- Threads and canvases show `#N · topic · address` on one row; the topic updates live and renames in place on click. Tabs show the first few plus `+N`.
+
+## [0.26.197] - 2026-10-11
+
+### Added
+- fzf-style `@` path completion in the composer: typos and deep paths match, fast on million-file repos, no git needed.
+
+## [0.26.193] - 2026-10-11
+
+### Changed
+- `tldrq playbook list` and `show` print readable tables; `!` commands get a dark-blue composer and a taller output tray; canvas and urgency cues go to the leading master only.
+
 ## [0.26.192] - 2026-10-11
 
 ### Added
@@ -88,4 +108,4 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 ### Fixed
 - Proxy memory and CPU use under load, restart/identity handling, and raw-byte leakage from canvases into the terminal.
 
-See the GitHub Releases page for exact download links.
+Install or update with the one-line installer in the [README](README.md#install); `tldrq update` keeps you current.

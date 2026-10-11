@@ -29,6 +29,10 @@ make any one agent faster on its own.
 
 ## Videos
 
+![Kubernetes animation playing in a real tldrq canvas](docs/media/canvas-mdgl-k8s.gif)
+
+[Watch the MP4](docs/media/canvas-mdgl-k8s.mp4) · [MDGL scenes and documentation](https://github.com/enmaq/mdgl)
+
 - [tldrq: Team, Threads and Canvas](docs/media/tldrq-main.mp4) — the overview above.
 - [Threads](docs/media/threads.mp4) — a long conversation, grouped and searchable.
 - [Canvas](docs/media/canvas.mp4) — an animated page, edited live.
