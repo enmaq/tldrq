@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.209] - 2026-10-11
+
+- Fixed: a worker you add to a running Team can now `tldrq team run ready-ack` and use the iteration control channel; it joins with the Team Playbook of its wave.
+
+- Changed: status canvases for every project use one numbered table, a green/yellow/white three-state legend, notes for details and blockers, and a UTC update time.
+
 ## [0.26.208] - 2026-10-11
 
 - Fixed: forming a Team over the free agent cap now opens the same yellow Upgrade sheet as adding an agent, instead of a plain "Team not formed" notice.
