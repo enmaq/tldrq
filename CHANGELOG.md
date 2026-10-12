@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.217] - 2026-10-12
+
+- Added: free signed playbook packs from a configurable GitHub index, bounded in-memory validation, pinned installs and human-approved updates; authors can migrate to a new release for re-signing.
+
 ## [0.26.216] - 2026-10-12
 
 - Added: offline `tldrq playbook check` for versioned pack manifests and bounded entry validation; no activation or network access.
