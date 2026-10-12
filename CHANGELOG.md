@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.219] - 2026-10-12
+
+- Canvas CLI and existing MCP tools accept full canvas URIs to target another workspace in the same project; bare IDs stay local.
+
 ## [0.26.218] - 2026-10-12
 
 - Channels roster removes exited Team members and refreshes when their presence changes.
