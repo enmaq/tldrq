@@ -4,6 +4,22 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.222] - 2026-10-12
+
+- Ctrl+\ search: the selected result is one full-width bar on a single aligned line (source | title, plus where when it differs), like Midnight Commander; it stays on the same item when results re-rank, and Up/Down/PgUp/PgDn/Home/End move it. "Searching…" no longer sticks after results arrive, the source tabs fit 80 columns, and Home/End work in tmux, the Linux console and xterm application mode.
+
+- Long Team results arrive whole up to 4000 bytes; longer ones end with `[truncated]` and an intact link to the full message (the link used to be cut too).
+
+- "Busy" means a member holds a live task or is mid-turn; recent traffic alone shows idle, and a restart with no live tasks shows everyone idle.
+
+- Context cleanup never clears a master or a busy worker; "clear all" goes only to confirmed idle workers, and a cleared worker reloads the current Team playbook and keeps its task.
+
+- Reopen keeps the Team as it was: removed members stay removed, added members come back with the same model and start settings, and `team members` shows the Codex model instead of `-`.
+
+- With a thread and a canvas open, each maximize button maximizes its own pane.
+
+- `-h`/`--help` on any command prints usage and never sends anything (`notifications send --help` used to send "--help").
+
 ## [0.26.221] - 2026-10-12
 
 - Added: signed encrypted playbook pack sealing, device-bound activation and offline receipts; validation shows rule names and counts only, and encrypted packs stay inactive for agents.
