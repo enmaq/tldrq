@@ -4,6 +4,11 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.213] - 2026-10-12
+
+- Added: Windows builds (amd64, arm64) are published with every release, capped like Linux and macOS.
+- Added: short default CLI help and two-word run, memory, instructions, key, voice, install, probe and collector entry points; existing nested paths remain supported.
+
 ## [0.26.212] - 2026-10-12
 
 - Added: `tldrq notifications send "text"` pushes a message to your enmaq app (web push; email only when no push target), after `tldrq notifications on`.
