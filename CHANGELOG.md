@@ -4,6 +4,18 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.212] - 2026-10-12
+
+- Added: `tldrq notifications send "text"` pushes a message to your enmaq app (web push; email only when no push target), after `tldrq notifications on`.
+- Added: misspelled commands suggest a copyable command, preserving arguments, including one-level subcommands.
+
+- Fixed: historical CLI command names forward to their canonical commands instead of refusing; `login`, `logout` and `whoami` are first-class commands.
+- Added: `tldrq login` (the old `tldrq api login` still works). On a server without a browser it prints a code and a link: open it on any device, approve, and the CLI finishes by itself; no URL to paste back.
+
+## [0.26.211] - 2026-10-11
+
+- No user-facing changes (CI release of a test-only fix on top of 0.26.210).
+
 ## [0.26.210] - 2026-10-11
 
 - Fixed: automatic channel replies require an assistant answer marker and never forward Claude status, compact footers or cropped tool captions; channel reads display human authors separately from the transport handle.
