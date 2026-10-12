@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.220] - 2026-10-12
+
+- Search reuses a warm provider and reads the committed index during refresh; pending queries show “Searching…”, and Ctrl+D copies content-free diagnostics.
+
 ## [0.26.219] - 2026-10-12
 
 - Canvas CLI and existing MCP tools accept full canvas URIs to target another workspace in the same project; bare IDs stay local.
