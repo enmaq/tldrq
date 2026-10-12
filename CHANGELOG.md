@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.221] - 2026-10-12
+
+- Added: signed encrypted playbook pack sealing, device-bound activation and offline receipts; validation shows rule names and counts only, and encrypted packs stay inactive for agents.
+
+- `~/.tldrq` stays bounded: once a day tldrq rotates `shell.log`/`collector.log` at 50 MB, caps the voice cache at 100 MB, keeps the last 5 archive/backup folders and drops idle proxy hosts and old iteration files; databases and foreign folders are never touched. `tldrq status` shows the folder size split into tldrq and other.
+
 ## [0.26.220] - 2026-10-12
 
 - Search reuses a warm provider and reads the committed index during refresh; pending queries show “Searching…”, and Ctrl+D copies content-free diagnostics.
