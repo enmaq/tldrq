@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.214] - 2026-10-12
+
+- No user-facing changes (test isolation fix for a flaky learn test).
+
 ## [0.26.213] - 2026-10-12
 
 - Added: Windows builds (amd64, arm64) are published with every release, capped like Linux and macOS.
