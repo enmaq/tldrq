@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.215] - 2026-10-12
+
+- Fixed: canvas tables with emoji status cells: ⚪ (and other emoji symbols) now count two columns, so rows stay aligned and the glyph is no longer overdrawn; long messages sent to agents are no longer cut in the middle of an emoji ("�…").
+
 ## [0.26.214] - 2026-10-12
 
 - No user-facing changes (test isolation fix for a flaky learn test).
