@@ -45,8 +45,9 @@ curl -fsSL "https://app.enmaq.com/api/v1/tldrq/install.sh?src=github" | sh
 
 Linux needs glibc 2.34+ (Ubuntu 22.04+, Debian 12+) — the installer checks before
 downloading and tells you plainly if your system is too old. macOS has no such
-floor. Sign in anytime after with `tldrq api login`; a local Team with your
-own Claude or Codex agents works before that, with no account.
+floor. Sign in anytime after with `tldrq login`; a local Team with your
+own Claude or Codex agents works before that, with no account (your agents talk
+to their own providers as usual).
 
 ## Quick start
 
@@ -57,6 +58,32 @@ tldrq canvas new "name"           # a shared page; put an mdgl fence and it anim
 ```
 
 More at **app.enmaq.com**.
+
+## FAQ
+
+### Why isn't tldrq open source?
+
+We use and love open source: we contribute back where we can and tip the projects we rely on.
+
+tldrq is a commercial product from a small team, so its source is closed for now. We **open it on request**: for a security review, an audit, or a customer who needs to see it, we share the code under a simple agreement. Write to support@enmaq.com.
+
+What is open anyway:
+
+- **your data:** code graph, memories, canvases and playbooks are plain files in your repo and home folder, readable and yours
+- **docs, changelog and file formats**
+- **MDGL**, our animation language, public on the package registries
+
+## What tldrq connects to
+
+While you are logged out and working locally, tldrq makes no connections outside your machine. It contacts these only when you use the matching feature:
+
+- **app.enmaq.com** and **api.enmaq.com**: only after you log in or use online features: login, licence, the update check (at most once a day, only while logged in), pack activation for encrypted packs, remote Teams, calls, and voice notifications if you set an API key. Requests carry the tldrq version.
+- **GitHub** (the pack index and the pack file): only when you run pack commands.
+- **api.anthropic.com**: only if you give tldrq your own `ANTHROPIC_API_KEY` for memory summaries (or a local model URL you configure).
+- **Your agents' own providers** (Anthropic, OpenAI, ...): called by your agents as usual, not by tldrq.
+- **ipapi.co**: only after `tldrq config geo on` (or a configured access region). Off by default.
+
+No telemetry: we found no analytics or telemetry client in the source.
 
 ## License
 

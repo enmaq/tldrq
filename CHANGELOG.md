@@ -4,6 +4,14 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.225] - 2026-10-13
+
+- The optional exit-country check (ipapi.co) is now off by default: no network call and no flag until `tldrq config geo on` or a workspace access region is set.
+
+- tldrq now sends its version with each request to app.enmaq.com, and shows a startup banner and update notice if a minimum version is ever published. It never blocks a running session; no minimum is published yet.
+
+- README: an FAQ ("Why isn't tldrq open source?") and a short list of what tldrq connects to, and when.
+
 ## [0.26.224] - 2026-10-13
 
 - `~/.tldrq` stays tidy: each project's data now lives under `~/.tldrq/workspaces/<name>/`, so a project can no longer collide with tldrq's own folders. Existing project folders that hold only tldrq's own files move there once, in the background, leaving a symlink and a line in `workspaces/.migration.log`; a folder with anyone else's files in it stays where it is, and nothing is ever deleted.
