@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.230] - 2026-10-13
+
+- SkillPaq inspection uses the shared format-2 reader, showing model runtime metadata and all 24 funnel-v2 slots with the same canonical fingerprint as Compendium; inspection never executes a model.
+
 ## [0.26.229] - 2026-10-13
 
 - Channels: rest the pointer on a word for 2 s, or leave an unsent draft for 2 s, and every visible copy of that word lights up in the channel, thread and canvas panes (including the word under the pointer); sending or moving away clears it. Hover needs a terminal that reports mouse motion.
