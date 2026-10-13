@@ -4,6 +4,18 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.227] - 2026-10-13
+
+- Canvases: a `[ + new ]` button in the canvas tab strip (and `Alt+Shift+N`) asks for a title, creates the canvas and opens it ready to type; it also shows when you have no canvases yet. Esc cancels; a title is required.
+
+- `tldrq playbook inspect FILE` shows a playbook's fingerprint and slots without installing or running anything.
+
+- Team status no longer reports an agent as stuck behind an update dialog just because update text appears in its scrollback; only a real dialog at the bottom of the screen counts.
+
+- Restart keeps each added agent's exact start command: its startup instructions are recorded together with the command, so a reopen no longer starts it with different instructions.
+
+- Package format 2: agreed Errata 1 (signature preimage, capability order, minimum-runtime maps, nested forms refused) with conformance vectors, including an Ed25519 test vector checked by three independent implementations.
+
 ## [0.26.226] - 2026-10-13
 
 - Encrypted playbook packs can now be used by agents: `tldrq playbook pack enable <name>` asks for your approval and issues a use grant (worker agents by default, masters only with `--master`); the pack's rules are then added to those agents' model requests in memory only. `pack disable` turns it off. Anthropic is supported first; other providers fail with a clear message.
