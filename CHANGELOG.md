@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.224] - 2026-10-13
+
+- `~/.tldrq` stays tidy: each project's data now lives under `~/.tldrq/workspaces/<name>/`, so a project can no longer collide with tldrq's own folders. Existing project folders that hold only tldrq's own files move there once, in the background, leaving a symlink and a line in `workspaces/.migration.log`; a folder with anyone else's files in it stays where it is, and nothing is ever deleted.
+
 ## [0.26.223] - 2026-10-12
 
 - The first Ctrl+\ search after a fresh start no longer fails with "Search timed out; retry" while the index is still building: the palette shows what is already indexed with "Indexing… · showing partial results" (or "Indexing N/M" when the total is known). Real index errors still show as errors.
