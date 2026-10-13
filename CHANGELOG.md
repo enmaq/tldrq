@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.223] - 2026-10-12
+
+- The first Ctrl+\ search after a fresh start no longer fails with "Search timed out; retry" while the index is still building: the palette shows what is already indexed with "Indexing… · showing partial results" (or "Indexing N/M" when the total is known). Real index errors still show as errors.
+
 ## [0.26.222] - 2026-10-12
 
 - Ctrl+\ search: the selected result is one full-width bar on a single aligned line (source | title, plus where when it differs), like Midnight Commander; it stays on the same item when results re-rank, and Up/Down/PgUp/PgDn/Home/End move it. "Searching…" no longer sticks after results arrive, the source tabs fit 80 columns, and Home/End work in tmux, the Linux console and xterm application mode.
