@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.228] - 2026-10-13
+
+- Renamed: playbooks are now **SkillPaqs**. `tldrq skillpaq ...` replaces `tldrq playbook ...` (the old verb keeps working, hidden, for one release), the MCP tools are `skillpaq_list` and `skillpaq_show` (the old names still answer), and new files are `.skillpaq` under `.tldrq/skillpaqs/`. Everything you already have keeps loading: `.playbook` files, `.tldrq/playbooks/`, signed packs and the wire and database names are unchanged.
+
 ## [0.26.227] - 2026-10-13
 
 - Canvases: a `[ + new ]` button in the canvas tab strip (and `Alt+Shift+N`) asks for a title, creates the canvas and opens it ready to type; it also shows when you have no canvases yet. Esc cancels; a title is required.

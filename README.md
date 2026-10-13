@@ -69,7 +69,7 @@ tldrq is a commercial product from a small team, so its source is closed for now
 
 What is open anyway:
 
-- **your data:** code graph, memories, canvases and playbooks are plain files in your repo and home folder, readable and yours
+- **your data:** code graph, memories, canvases and SkillPaqs are plain files in your repo and home folder, readable and yours
 - **docs, changelog and file formats**
 - **MDGL**, our animation language, public on the package registries
 
