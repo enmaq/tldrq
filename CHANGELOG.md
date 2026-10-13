@@ -4,6 +4,14 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.229] - 2026-10-13
+
+- Channels: rest the pointer on a word for 2 s, or leave an unsent draft for 2 s, and every visible copy of that word lights up in the channel, thread and canvas panes (including the word under the pointer); sending or moving away clears it. Hover needs a terminal that reports mouse motion.
+
+- Canvases can't be wiped or written to the wrong place by accident: `canvas put` with an empty body is refused unless `--allow-empty` is passed, and a short canvas id that also names a canvas in another recently used workspace is refused with the full `tldrq://` URIs to choose from.
+
+- Package format 2: Errata 2, the jointly signed model-kind projection with the funnel-v2 fingerprint vector checked by three independent implementations. Signing and execution stay off.
+
 ## [0.26.228] - 2026-10-13
 
 - Renamed: playbooks are now **SkillPaqs**. `tldrq skillpaq ...` replaces `tldrq playbook ...` (the old verb keeps working, hidden, for one release), the MCP tools are `skillpaq_list` and `skillpaq_show` (the old names still answer), and new files are `.skillpaq` under `.tldrq/skillpaqs/`. Everything you already have keeps loading: `.playbook` files, `.tldrq/playbooks/`, signed packs and the wire and database names are unchanged.
