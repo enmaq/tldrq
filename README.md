@@ -77,7 +77,7 @@ What is open anyway:
 
 While you are logged out and working locally, tldrq makes no connections outside your machine. It contacts these only when you use the matching feature:
 
-- **app.enmaq.com** and **api.enmaq.com**: only after you log in or use online features: login, licence, the update check (at most once a day, only while logged in), pack activation for encrypted packs, remote Teams, calls, and voice notifications if you set an API key. Requests carry the tldrq version.
+- **app.enmaq.com** and **api.enmaq.com**: only after you log in or use online features: login, licence, the update check (at most once a day, only while logged in), pack activation for encrypted packs, remote Teams, calls, and voice notifications if you set an API key. Requests to our hosts carry the tldrq version.
 - **GitHub** (the pack index and the pack file): only when you run pack commands.
 - **api.anthropic.com**: only if you give tldrq your own `ANTHROPIC_API_KEY` for memory summaries (or a local model URL you configure).
 - **Your agents' own providers** (Anthropic, OpenAI, ...): called by your agents as usual, not by tldrq.

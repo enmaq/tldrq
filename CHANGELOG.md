@@ -4,6 +4,14 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.226] - 2026-10-13
+
+- Encrypted playbook packs can now be used by agents: `tldrq playbook pack enable <name>` asks for your approval and issues a use grant (worker agents by default, masters only with `--master`); the pack's rules are then added to those agents' model requests in memory only. `pack disable` turns it off. Anthropic is supported first; other providers fail with a clear message.
+
+- `tldrq playbook export` writes a licensed pack's data files to a folder you choose, with LICENSE and provenance, after a preview and your explicit approval. Only packs with licence terms can be exported; nothing is overwritten or executed.
+
+- Every request to app.enmaq.com now carries the tldrq version, including login, licence and calls (0.26.225 sent it only on the update check and downloads).
+
 ## [0.26.225] - 2026-10-13
 
 - The optional exit-country check (ipapi.co) is now off by default: no network call and no flag until `tldrq config geo on` or a workspace access region is set.
