@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.236] - 2026-10-14
+
+- Animated canvases are cheaper again: unchanged text and table rows keep their trimmed, padded form between frames (bounded per page), so a frame now takes about 1.3 ms and 3 MB instead of 3.5 ms and 13 MB.
+
 ## [0.26.235] - 2026-10-14
 
 - Canvases with an MDGL animation no longer burn CPU: text, tables and page geometry are laid out once and reused while the animation plays, instead of on every frame (about 3x less work per frame, and none once the animation has settled).
