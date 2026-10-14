@@ -4,6 +4,11 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.235] - 2026-10-14
+
+- Canvases with an MDGL animation no longer burn CPU: text, tables and page geometry are laid out once and reused while the animation plays, instead of on every frame (about 3x less work per frame, and none once the animation has settled).
+- On Linux, a hung collector now recovers by itself. When a shell auto-starts the collector and finds a verified tldrq collector that has failed its health checks for 15 seconds, it saves a SIGQUIT goroutine dump in `collector.log` and takes over. Processes it cannot verify, or that do not exit, are left alone with an error and never force-killed.
+
 ## [0.26.234] - 2026-10-14
 
 - Tabs, carriage returns and other control characters no longer misalign single-line rows (search results and previews, input fields, command lists, canvas width). Your text and commands are stored unchanged.
