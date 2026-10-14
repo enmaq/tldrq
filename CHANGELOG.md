@@ -4,6 +4,13 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+- Teams: on a Tandem team that grew past two members, a plain human channel message routes to the leading master only instead of mentioning the whole roster; explicit @handles still reach their owners.
+
+## [0.26.241] - 2026-10-14
+
+- Spelling: two swapped letters in a short word are fixed too (elft → left, lfet → left); a word that is already known, or has two possible swaps, is left alone.
+- Naming people: when someone new writes, the master asks "Call you <name>?" with a guess from git user.name, git user.email, the OS account's full name or the login email, the same on Windows, macOS and Linux. Nothing is saved until confirmed, and the computer name is never used.
+
 ## [0.26.240] - 2026-10-14
 
 - Privacy: agents keep only a person's display name in shared workspace memory. Language, pronouns, tone, working hours and other preferences go to private per-developer memory (`--scope personal`), which is never in git.
