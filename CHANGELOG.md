@@ -4,6 +4,19 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.232] - 2026-10-14
+
+- Accents, flags and joined emoji now display correctly in channel and thread views, including when text wraps and the screen redraws.
+- Spelling help learns your words. A `[+]` after each suggestion chip adds the word to your personal dictionary (`~/.tldrq/prose/allow.txt`, never in git). Common technical terms (tldrq, repo, config, params, sudo, backend, llms, ...) are no longer flagged. Optionally, `tldrq config set prose.auto_learn true` adds words you have sent in three messages.
+- Tab strips no longer jump when a count changes digits: counts keep a stable width for the session (`( 6)` next to `(67)`), grow only past 99 and never shrink back.
+- Shortcut hints are learned per session: once you use a shortcut or its matching control, its hint (including the Alt+U pulse) stays quiet for the rest of the shell session.
+- Canvas typing is faster. A server echo that matches what you typed no longer resets the editor or re-renders the page, unchanged frames reuse the last render, and presence updates are sent at most every 500 ms while typing.
+- Canvas typing saves are much cheaper. The revision history file is written on a pause, at least every 10 s, when a checkpoint changes and on shutdown, instead of on every keystroke batch. The text itself is still saved atomically on every batch, so a crash can lose only in-between versions, never the current text.
+- New Teams automatically get one workspace Status canvas with an initial status table, linked from the master's setup context. Restarts and concurrent starts reuse it.
+- Team KPI no longer reports a busy Codex screen (Working, Waiting for agents, or a warnings footer) as a blocking dialog. Real approval dialogs are still detected.
+- The canvas recency log (`.tldrq/canvas/.recent.json`) is runtime state and is never committed.
+- Local SkillPaq messages now store the new metadata names alongside the legacy names, and readers accept either spelling. Remote requests keep the legacy names, so retries stay compatible with older collectors. Team identities, database names and signed package bytes are unchanged.
+
 ## [0.26.231] - 2026-10-14
 
 - Fixes letters that occasionally went blank or shifted after a screen update, mostly after emoji or other wide characters (it looked like typos, especially with bionic reading on).
