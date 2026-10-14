@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.244] - 2026-10-14
+
+- Channel views use less CPU on a busy Team: repeated readiness check-ins no longer reload the iteration view (about 3.7x cheaper per poll); real budget changes, lease deadlines and roster or profile edits still refresh it.
+
 ## [0.26.243] - 2026-10-14
 
 - README demo videos re-recorded on the current UI (main tour, threads, canvas). No app changes.
