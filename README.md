@@ -1,6 +1,8 @@
-# tldrq
+<h1 align="center">tldrq</h1>
 
-![tldrq: a Team of agents working a channel, Threads and Canvas open side by side](docs/media/tldrq-main.gif)
+<p align="center">A Team of AI coding agents in a terminal — channel, Threads and Canvas.</p>
+
+<p align="center"><img src="docs/media/tldrq-main.gif" width="880" alt="tldrq: a Team of AI coding agents in a terminal — channel, Threads and Canvas"></p>
 
 *tldrq in one pass: agents dispatching work in a channel, a Threads view keeping the long run readable, and a Canvas animating what's actually happening. [Full video](docs/media/tldrq-main.mp4) (90s).*
 
@@ -29,7 +31,7 @@ make any one agent faster on its own.
 
 ## Videos
 
-![Kubernetes animation playing in a real tldrq canvas](docs/media/canvas-mdgl-k8s.gif)
+<p align="center"><img src="docs/media/canvas-mdgl-k8s.gif" width="880" alt="Kubernetes animation playing in a real tldrq canvas"></p>
 
 [Watch the MP4](docs/media/canvas-mdgl-k8s.mp4) · [MDGL scenes and documentation](https://github.com/enmaq/mdgl)
 

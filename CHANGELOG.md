@@ -4,6 +4,16 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.231] - 2026-10-14
+
+- Fixes letters that occasionally went blank or shifted after a screen update, mostly after emoji or other wide characters (it looked like typos, especially with bionic reading on).
+
+- Word highlight is now plain black/white inverse, so matches stand out clearly.
+
+- Canvases are stored slim: git now holds each canvas as a readable `<id>.md` (the current text) plus a small `<id>.json`, while revision history, receipts and checkpoints stay local in a git-excluded `.tldrq/canvas/.history/` folder. Old canvas files still read and are converted on their next edit with every revision kept; `tldrq canvas migrate --all` (dry run, then `--apply`) converts them all at once. A checkout pulled on another machine starts with the current text and fresh history.
+
+- `canvas put` with a stale `--base` that overlaps newer edits is refused instead of storing conflict markers; a clean merge reports the merged rev range so you know the stored body differs from your file.
+
 ## [0.26.230] - 2026-10-13
 
 - SkillPaq inspection uses the shared format-2 reader, showing model runtime metadata and all 24 funnel-v2 slots with the same canonical fingerprint as Compendium; inspection never executes a model.
