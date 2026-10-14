@@ -4,6 +4,13 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.237] - 2026-10-14
+
+- Spelling help now checks Russian and Spanish, with German and French to follow. Words in any script are checked, Cyrillic and accented letters included. Missing accents are restored (francais → français), and `prose.languages` picks the languages (default en, ru, es, de, fr). The new word lists are machine-generated (Russian 38k forms, Spanish 25k), so while a list is under 100k words only safe fixes are made: accents, a doubled letter, two swapped letters. A correct word that is missing from the list is never changed, and `[+]` adds it to your dictionary.
+- Channel views no longer reload all presence and Team data on every worker heartbeat, and the channel list reads the roster once instead of once per row, cutting idle CPU.
+- The workspace picker lists recently opened workspaces first and shows when each was last opened. New workspace stays at the top.
+- The bottom tab strip uses a single dot between every tab again (`·C1·M1·M2·W1·`).
+
 ## [0.26.236] - 2026-10-14
 
 - Animated canvases are cheaper again: unchanged text and table rows keep their trimmed, padded form between frames (bounded per page), so a frame now takes about 1.3 ms and 3 MB instead of 3.5 ms and 13 MB.
