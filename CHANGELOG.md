@@ -4,6 +4,11 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.239] - 2026-10-14
+
+- Agents follow everyday communication norms: a new built-in `enmaq/human-rituals` SkillPaq (18 one-line goals such as: close the loop in the thread where you were asked, answer first and short, an ETA is a promise, stay calm with anger, remember names and preferences). A short essence of it is in every agent's setup; `quick-status` defers to it.
+- Humans are named instead of "human": a message you send carries your tldrq login, and channel and thread views show your saved name. Unknown people and guests look exactly as before. The master asks a new person's name once per workspace.
+
 ## [0.26.238] - 2026-10-14
 
 - The collector no longer slows down under many open channel views: the channel list is read with a few bulk queries instead of several per channel (about 6x faster at 100 channels), so channel replies and sends stop timing out.
