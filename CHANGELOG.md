@@ -4,6 +4,19 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.238] - 2026-10-14
+
+- The collector no longer slows down under many open channel views: the channel list is read with a few bulk queries instead of several per channel (about 6x faster at 100 channels), so channel replies and sends stop timing out.
+- A channel send that times out and is retried no longer posts twice. An unchanged resend reuses the same message id; an edited one gets a new id.
+- The workspace token total (⇅) no longer resets with a new build. It lives in one shared, locked `workspace-usage.json`, and the old per-build files are imported once. New usage is counted exactly; imported history is a measured sum of the stored files.
+- An open canvas fills the pane down to the last row; the channel composer no longer shows beneath it, and typing goes to the visible thread draft.
+- Canvas and thread headers read like a browser: the title on the first row with its controls, the full address on the second.
+- The new-canvas title prompt stays in place while you type. A deleted canvas can be restored for 24 hours, then it is removed for good (its number is never reused).
+- The left channel pane no longer jumps when a refresh times out.
+- Spelling: German and French word lists added, Russian grows to 55k forms and Spanish to 45k (machine-generated; lists under 100k words make only safe fixes).
+- The Team KPI recognises Claude Code's background-agents panel as busy instead of reporting a blocking dialog.
+- (0.26.237 also shows a fixed 🇺🇸 next to tldrq instead of `??`.)
+
 ## [0.26.237] - 2026-10-14
 
 - Spelling help now checks Russian and Spanish, with German and French to follow. Words in any script are checked, Cyrillic and accented letters included. Missing accents are restored (francais → français), and `prose.languages` picks the languages (default en, ru, es, de, fr). The new word lists are machine-generated (Russian 38k forms, Spanish 25k), so while a list is under 100k words only safe fixes are made: accents, a doubled letter, two swapped letters. A correct word that is missing from the list is never changed, and `[+]` adds it to your dictionary.
@@ -37,6 +50,8 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 - Tab strips no longer jump when a count changes digits: counts keep a stable width for the session (`( 6)` next to `(67)`), grow only past 99 and never shrink back.
 - Shortcut hints are learned per session: once you use a shortcut or its matching control, its hint (including the Alt+U pulse) stays quiet for the rest of the shell session.
 - Canvas typing is faster. A server echo that matches what you typed no longer resets the editor or re-renders the page, unchanged frames reuse the last render, and presence updates are sent at most every 500 ms while typing.
+
+- An open canvas next to a thread fills the pane to the last row; the channel composer underneath is gone, and typing after leaving canvas edit lands in the visible thread draft.
 - Canvas typing saves are much cheaper. The revision history file is written on a pause, at least every 10 s, when a checkpoint changes and on shutdown, instead of on every keystroke batch. The text itself is still saved atomically on every batch, so a crash can lose only in-between versions, never the current text.
 - New Teams automatically get one workspace Status canvas with an initial status table, linked from the master's setup context. Restarts and concurrent starts reuse it.
 - Team KPI no longer reports a busy Codex screen (Working, Waiting for agents, or a warnings footer) as a blocking dialog. Real approval dialogs are still detected.
