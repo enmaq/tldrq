@@ -4,7 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
-- Teams: on a Tandem team that grew past two members, a plain human channel message routes to the leading master only instead of mentioning the whole roster; explicit @handles still reach their owners.
+## [0.26.242] - 2026-10-14
+
+- One voice in the human channel: a plain message from you wakes only the leading master instead of mentioning every Team member; an explicit @name still reaches that agent.
+- Less clutter from agents: built-in rules now ask for one line plus an artifact path instead of evidence walls, the first failing test line instead of full output, and a reaction or silence instead of "noted" posts.
+- Channel views reuse unchanged iteration data instead of reloading it for every row (lookup about 7x faster), refreshing within a second when anything changes.
+- Only the elected leading master of a real Team creates the workspace Status canvas; test and scratch accounts no longer leave canvases in the repo.
 
 ## [0.26.241] - 2026-10-14
 
