@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.240] - 2026-10-14
+
+- Privacy: agents keep only a person's display name in shared workspace memory. Language, pronouns, tone, working hours and other preferences go to private per-developer memory (`--scope personal`), which is never in git.
+
 ## [0.26.239] - 2026-10-14
 
 - Agents follow everyday communication norms: a new built-in `enmaq/human-rituals` SkillPaq (18 one-line goals such as: close the loop in the thread where you were asked, answer first and short, an ETA is a promise, stay calm with anger, remember names and preferences). A short essence of it is in every agent's setup; `quick-status` defers to it.
