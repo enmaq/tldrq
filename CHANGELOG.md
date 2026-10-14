@@ -4,6 +4,16 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.234] - 2026-10-14
+
+- Tabs, carriage returns and other control characters no longer misalign single-line rows (search results and previews, input fields, command lists, canvas width). Your text and commands are stored unchanged.
+- Text marked to truncate now ends in an ellipsis instead of wrapping.
+- The Team KPI reports "input not submitted" when a message typed into a Claude worker is still sitting in its input box 10 seconds after sending. Nothing is pressed for you, and the message text is not shown.
+
+## [0.26.233] - 2026-10-14
+
+- Public repository community files: contributing guide, code of conduct, issue and pull-request templates. No app changes from 0.26.232.
+
 ## [0.26.232] - 2026-10-14
 
 - Accents, flags and joined emoji now display correctly in channel and thread views, including when text wraps and the screen redraws.
