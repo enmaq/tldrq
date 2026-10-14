@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.243] - 2026-10-14
+
+- README demo videos re-recorded on the current UI (main tour, threads, canvas). No app changes.
+
 ## [0.26.242] - 2026-10-14
 
 - One voice in the human channel: a plain message from you wakes only the leading master instead of mentioning every Team member; an explicit @name still reaches that agent.
