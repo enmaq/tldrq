@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.253] - 2026-10-15
+
+- Vision claim checks require an artifact reference for VERIFIED and reject invalid supersession. Missing state/caveat and stale claims are flagged only when read; unresolved blockers and history remain. Message bodies are unchanged, and an artifact reference is not independent proof. Cached views refresh expiry flags only on a new revision or an explicit read.
+
 ## [0.26.252] - 2026-10-15
 
 - Workers added from the Team UI only get names that survive a restart; previously a 9-letter generated name was silently dropped on Reopen. A member skipped on restore is now reported with its name and reason.
