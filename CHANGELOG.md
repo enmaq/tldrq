@@ -4,6 +4,14 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.249] - 2026-10-15
+
+- Channel views stop the fast redraw loop for hidden or stale worker status text; visible status text still scrolls.
+- After a restart, a worker shows busy only when it has assigned work or a visible spinner, not because it printed startup output.
+- Reopen keeps removed workers removed; a worker added on purpose comes back with its model and start settings; look-alike names stay distinct.
+- Masters can clear workers through `team_control` (action `clear`); each worker's own reply comes back as the result: cleared and primed, refused with a reason, or failed.
+- Slow Team sends (over 1 s) log their phase timings and shared database waits; fast sends stay quiet.
+
 ## [0.26.248] - 2026-10-15
 
 - Canvas: clicking in text below an animation block or inside a wrapped table puts the cursor where you clicked; typing no longer starts at the left edge.
