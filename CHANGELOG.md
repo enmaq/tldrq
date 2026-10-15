@@ -4,13 +4,22 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
-## [0.26.246] - 2026-10-15
+## [0.26.248] - 2026-10-15
+
+- Canvas: clicking in text below an animation block or inside a wrapped table puts the cursor where you clicked; typing no longer starts at the left edge.
+- Canvas: text uses the full canvas width and wraps the same way in view and edit mode, so nothing jumps when you start editing.
+
+## [0.26.247] - 2026-10-15
 
 - Auto-optimize now finds idle workers: Channel broadcasts and old unanswered asks no longer count as activity.
 - Auto-optimize and Clear context show which workers are eligible and why before anything is applied; the dialogs wrap long text instead of cutting it off.
 - Clear context skips workers that are busy right now, re-sends the bootstrap once if the worker did not take it, and reports per worker: cleared, primed or failed.
 - The bootstrap after a clear is built in one place from the worker's SkillPaqs and its roster role.
 - Masters can set a worker's role or model and add workers through `team_control` (actions `set` and `add`); a model change is sent to Claude Code and Codex workers and refused with a reason for others.
+
+## [0.26.246] - 2026-10-15
+
+- Rebuild for a SkillPaq module update; no tldrq changes.
 
 ## [0.26.245] - 2026-10-14
 
