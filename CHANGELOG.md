@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.252] - 2026-10-15
+
+- Workers added from the Team UI only get names that survive a restart; previously a 9-letter generated name was silently dropped on Reopen. A member skipped on restore is now reported with its name and reason.
+- UI diagnostics record key-to-screen latency buckets and redraw causes alongside SIGUSR2 profiles, without recording typed text.
+- German, Spanish and French spelling lists gain the common word forms that were missing (German had about half of them missing).
+
 ## [0.26.251] - 2026-10-15
 
 - Reacting to a message flashes it (or the hovered row) in the reaction's color for a third of a second, starting on the keypress; a reaction that fails to land flashes red with the error.
@@ -12,10 +18,6 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 - Wide thread panes reuse unchanged rows on redraw, cutting allocations while typing.
 - Clear results show only the worker's reply text, not the internal message envelope.
 - Human rituals: outside-world claims need a source someone opened, and every debate names a rotating skeptic who checks claims before the summary reaches the human.
-
-## [0.26.250] - 2026-10-15
-
-- Rebuild for a SkillPaq module update (finance branching policy); no tldrq changes.
 
 ## [0.26.249] - 2026-10-15
 
