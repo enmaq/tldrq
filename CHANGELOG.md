@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.259] - 2026-10-16
+
+- Your sent message appears as soon as the collector accepts it; the full channel reload runs in the background instead of delaying it. Messages from others sent at the same moment are kept exactly once, and a failed send restores your draft.
+- A new message in another thread no longer clears the open thread's rendered rows.
+- Slow channel-send log lines include the process and channel, and split message reads from acknowledgement waits.
+
 ## [0.26.258] - 2026-10-16
 
 - Removing a worker (by hand or by Auto-optimize) now closes its tab and ends its agent: the master shell compares its tabs with the Team roster on its existing refresh and closes tabs of removed members after a short grace. Paused workers keep their tabs. A worker running in its own terminal ends itself when removed.
