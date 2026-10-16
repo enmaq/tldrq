@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.261] - 2026-10-16
+
+- SkillPaq tab beside Threads and Canvas (terminal and browser): one list of every skill (proposed, approved, workspace, built-in) with search over names and rule text, the total on the tab, and the selected skill's LISP with the review controls. Approval still binds the exact reviewed hash.
+- Channel hover controls stay on the message header and never cover the text under the pointer; when the header is off screen they are hidden.
+- Fixed a race that could misplace channel text: terminal output and the status bar's cursor restore no longer interleave.
+
 ## [0.26.260] - 2026-10-16
 
 - Skills (local, first slice): agents can propose a SkillPaq with `skillpaq_propose` and list open proposals with `skillpaq_drafts`. A proposal is a canonical `(skillpaq ...)` LISP document, never Markdown. A proposal close to an existing pack becomes a versioned update of that pack instead of a new one, unless the agent justifies a new pack.
