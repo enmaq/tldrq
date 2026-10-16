@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.257] - 2026-10-16
+
+- The channel no longer waits for a running file-path search when it counts completion candidates; the count is published as soon as the path list changes.
+
 ## [0.26.256] - 2026-10-16
 
 - Auto-optimize removes idle workers on its own again: a restart no longer makes every worker look new, acknowledged-but-unanswered asks expire after 24 h, and an abandoned iteration (no moves, all items stale) no longer blocks it.
