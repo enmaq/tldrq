@@ -4,6 +4,11 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.255] - 2026-10-16
+
+- Canvas: clicking into a plain paragraph edits just that paragraph in place; headings, tables, animations and other paragraphs stay rendered and do not move. A source longer than the paragraph's rows scrolls inside it. Lists, tables and animation blocks still use the existing editor.
+- Masters keep a private communication profile for the person they work with (`tldrq person --for <id> me|note`), taught once by the first-contact cue; communication traits only, 2 KB, stored outside the repo.
+
 ## [0.26.254] - 2026-10-15
 
 - Channel redraws no longer re-read the memory file for every human message: a thread with 80 human messages took about 50 ms and 89 MB per frame, and the name lookup is now cached until the file changes. This is a likely main cause of slow typing in busy channels.
