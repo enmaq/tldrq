@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.258] - 2026-10-16
+
+- Removing a worker (by hand or by Auto-optimize) now closes its tab and ends its agent: the master shell compares its tabs with the Team roster on its existing refresh and closes tabs of removed members after a short grace. Paused workers keep their tabs. A worker running in its own terminal ends itself when removed.
+
 ## [0.26.257] - 2026-10-16
 
 - The channel no longer waits for a running file-path search when it counts completion candidates; the count is published as soon as the path list changes.
