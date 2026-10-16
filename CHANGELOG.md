@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.260] - 2026-10-16
+
+- Skills (local, first slice): agents can propose a SkillPaq with `skillpaq_propose` and list open proposals with `skillpaq_drafts`. A proposal is a canonical `(skillpaq ...)` LISP document, never Markdown. A proposal close to an existing pack becomes a versioned update of that pack instead of a new one, unless the agent justifies a new pack.
+- New Skills panel (Team menu `[S] Skills`, browser toolbar `[Skills]`) with Proposals, My skills and Review tabs. Review shows the exact LISP source, its hash, the parent pack and a diff. You approve, reject or edit there. Agents cannot approve.
+- Safe-to-share check before approval: secrets, tokens and private facts from your profile are flagged and block approval until the source is edited and re-scanned. Approval binds the exact reviewed hash. Approved packs are pinned on this device and marked "approved on this device (local)". Account signing, sync and other visibility levels come later.
+
 ## [0.26.259] - 2026-10-16
 
 - Your sent message appears as soon as the collector accepts it; the full channel reload runs in the background instead of delaying it. Messages from others sent at the same moment are kept exactly once, and a failed send restores your draft.
