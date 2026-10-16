@@ -4,6 +4,13 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.256] - 2026-10-16
+
+- Auto-optimize removes idle workers on its own again: a restart no longer makes every worker look new, acknowledged-but-unanswered asks expire after 24 h, and an abandoned iteration (no moves, all items stale) no longer blocks it.
+- Removing a member from a closed work round no longer fails the cleanup; an open round left without a turn order is marked blocked for the master to re-plan.
+- Collector: saving an agent's status no longer holds the global lock during the database write, so one slow write cannot stall every other request.
+- Slow channel sends log where the time goes (handoff, editor, receipts, updates, canvas, transcript, panes), only while a send is pending.
+
 ## [0.26.255] - 2026-10-16
 
 - Canvas: clicking into a plain paragraph edits just that paragraph in place; headings, tables, animations and other paragraphs stay rendered and do not move. A source longer than the paragraph's rows scrolls inside it. Lists, tables and animation blocks still use the existing editor.
