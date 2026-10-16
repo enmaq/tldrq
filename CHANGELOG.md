@@ -4,6 +4,13 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.254] - 2026-10-15
+
+- Channel redraws no longer re-read the memory file for every human message: a thread with 80 human messages took about 50 ms and 89 MB per frame, and the name lookup is now cached until the file changes. This is a likely main cause of slow typing in busy channels.
+- The web Channel shows each person's name instead of "human" (falls back to "human" when the name is unknown).
+- `tldrq person me` shows your private communication profile, and `--forget` deletes it. It is stored only on your machine, never in the repo; agents record observations with `tldrq person note`.
+- A worker that leaves retries its leave call for up to ~18 s when the collector is overloaded, instead of lingering in the roster for 5 minutes; a final failure is logged once.
+
 ## [0.26.253] - 2026-10-15
 
 - Vision claim checks require an artifact reference for VERIFIED and reject invalid supersession. Missing state/caveat and stale claims are flagged only when read; unresolved blockers and history remain. Message bodies are unchanged, and an artifact reference is not independent proof. Cached views refresh expiry flags only on a new revision or an explicit read.
