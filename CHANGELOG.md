@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.267] - 2026-10-17
+
+- SkillPaq review uses one row of large buttons, in the terminal and the browser: a proposal shows `Approve · Enter` (default), Reject, Edit, Visibility and `Close · Esc`. While the safe-to-share check has findings, Approve shows as `Blocked` and Enter does nothing. Built-in skills show only Close; Back appears only in a nested narrow view.
+- `Unapprove` on an approved skill undoes an accidental approval: the skill returns to proposed, the revocation is recorded next to the approval receipt and nothing is deleted, so it can be approved again.
+- `Ctrl+Alt+S` no longer opens a blank page when skills cannot be loaded; the status and the error stay visible.
+
 ## [0.26.266] - 2026-10-17
 
 - The collector log names who started each collector (parent process, command, handle) and why (no pid file, stale pid, health check failed), so an unexpected restart can be traced to its source.
