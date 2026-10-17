@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.262] - 2026-10-16
+
+- The SkillPaq tab label is orange in the terminal and the browser, so skills stand apart from Threads and Canvas; its count shows without a padded space ("SkillPaq (4)").
+
 ## [0.26.261] - 2026-10-16
 
 - SkillPaq tab beside Threads and Canvas (terminal and browser): one list of every skill (proposed, approved, workspace, built-in) with search over names and rule text, the total on the tab, and the selected skill's LISP with the review controls. Approval still binds the exact reviewed hash.
