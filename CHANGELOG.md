@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.266] - 2026-10-17
+
+- The collector log names who started each collector (parent process, command, handle) and why (no pid file, stale pid, health check failed), so an unexpected restart can be traced to its source.
+
 ## [0.26.265] - 2026-10-17
 
 - Pressing `Alt+T`, `Alt+C` or `Alt+S` again cycles through threads, canvases or skills with activity in the last 8 hours, newest first, and wraps around. The item header shows the position ("3/5 in last 8 h", or "latest available" when nothing is that recent). `Esc` closes; `Alt+Shift+T` / `Alt+Shift+C` still open the full lists.
