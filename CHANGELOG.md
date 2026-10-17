@@ -4,6 +4,11 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.265] - 2026-10-17
+
+- Pressing `Alt+T`, `Alt+C` or `Alt+S` again cycles through threads, canvases or skills with activity in the last 8 hours, newest first, and wraps around. The item header shows the position ("3/5 in last 8 h", or "latest available" when nothing is that recent). `Esc` closes; `Alt+Shift+T` / `Alt+Shift+C` still open the full lists.
+- The SkillPaq view shows the skill in plain language on top and its LISP below in grey, indented and highlighted. Safe-to-share findings stay marked in the source, the detail scrolls while the review buttons stay visible, and the skill list is 20% wider.
+
 ## [0.26.264] - 2026-10-17
 
 - `Alt+S` (or `Ctrl+Alt+S`) opens the SkillPaq tab, like `Alt+T` for Threads and `Alt+C` for Canvas; workspace settings moved to `Alt+O`. `Alt+Shift+S` still sends.
