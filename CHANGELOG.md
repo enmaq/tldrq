@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.270] - 2026-10-17
+
+- The SkillPaq and Processes button bar no longer draws a white band across the bottom: the bar sits on the pane's dark background and only the buttons are filled.
+
 ## [0.26.269] - 2026-10-17
 
 - The long shortcut line under the composer is gone. An empty composer shows one muted hint instead, chosen by context (unread messages, a running command, a selected message, an open thread or canvas) and ending with `· Alt+? all keys`. It changes when you send or refocus, never on a timer, and disappears as you type. The browser composer shows the same hints, with `Shift+Enter newline` for a new line.
