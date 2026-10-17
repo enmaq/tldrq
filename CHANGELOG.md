@@ -4,6 +4,11 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.268] - 2026-10-17
+
+- New `[ Processes (N running) ]` tab, first in the tab strip (`Alt+P`), in the terminal and the browser. It lists commands run from the command tray (`!command`): running ones first, then finished ones with ✓ exit 0, ✗ exit N or ⊘ stopped and their duration. Selecting one shows who ran it, when it started and the end of its output.
+- Actions: `Stop` a running command (only its own processes), `Copy output → composer` (never sends), `Rerun` a finished one after a confirmation that defaults to Cancel, `Delete` a finished entry. The last 50 finished commands are kept across restarts, per workspace, outside the repo.
+
 ## [0.26.267] - 2026-10-17
 
 - SkillPaq review uses one row of large buttons, in the terminal and the browser: a proposal shows `Approve · Enter` (default), Reject, Edit, Visibility and `Close · Esc`. While the safe-to-share check has findings, Approve shows as `Blocked` and Enter does nothing. Built-in skills show only Close; Back appears only in a nested narrow view.
