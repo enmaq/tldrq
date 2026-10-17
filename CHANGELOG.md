@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.271] - 2026-10-17
+
+- An empty Processes tab says "No commands yet. Run !command in the composer." once, across the whole pane, instead of twice in two columns. The filter hint is shorter ("filter commands") so it fits at 80 columns; a filter with no match says "No matching commands."
+
 ## [0.26.270] - 2026-10-17
 
 - The SkillPaq and Processes button bar no longer draws a white band across the bottom: the bar sits on the pane's dark background and only the buttons are filled.
