@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.263] - 2026-10-17
+
+- Agent control keys can dismiss a blocking dialog immediately instead of waiting behind queued messages; normal messages remain held until the prompt returns.
+
 ## [0.26.262] - 2026-10-16
 
 - The SkillPaq tab label is orange in the terminal and the browser, so skills stand apart from Threads and Canvas; its count shows without a padded space ("SkillPaq (4)").
