@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.264] - 2026-10-17
+
+- `Alt+S` (or `Ctrl+Alt+S`) opens the SkillPaq tab, like `Alt+T` for Threads and `Alt+C` for Canvas; workspace settings moved to `Alt+O`. `Alt+Shift+S` still sends.
+- Canvas links in channel and thread messages, including `[label](tldrq://…/canvas/N)` links, open canvases from other workspaces in the same project as read-only views, keeping their workspace and link visible. A link to a different project says it is unavailable instead of doing nothing.
+- The SkillPaq catalog records when each skill last changed (built-in skills have no date).
+
 ## [0.26.263] - 2026-10-17
 
 - Agent control keys can dismiss a blocking dialog immediately instead of waiting behind queued messages; normal messages remain held until the prompt returns.
