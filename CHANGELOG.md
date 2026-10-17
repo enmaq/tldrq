@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.269] - 2026-10-17
+
+- The long shortcut line under the composer is gone. An empty composer shows one muted hint instead, chosen by context (unread messages, a running command, a selected message, an open thread or canvas) and ending with `· Alt+? all keys`. It changes when you send or refocus, never on a timer, and disappears as you type. The browser composer shows the same hints, with `Shift+Enter newline` for a new line.
+- The Processes tab shows running/total, e.g. `[ Processes (0/50) ]`, in grey; Threads stay blue, Canvas purple, SkillPaq orange. At narrow widths all four tabs stay visible with short labels.
+- Fixed the blue background spilling to the left of the tabs.
+
 ## [0.26.268] - 2026-10-17
 
 - New `[ Processes (N running) ]` tab, first in the tab strip (`Alt+P`), in the terminal and the browser. It lists commands run from the command tray (`!command`): running ones first, then finished ones with ✓ exit 0, ✗ exit N or ⊘ stopped and their duration. Selecting one shows who ran it, when it started and the end of its output.
