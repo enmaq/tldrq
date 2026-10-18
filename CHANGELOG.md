@@ -4,6 +4,13 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.273] - 2026-10-18
+
+- Canvas: after 1 s without typing, a large `Finished editing? Press Esc` button appears at the bottom. Esc (or a click) leaves editing and, once your edits are saved, sends agents one "finished editing canvas N" note with the diff right away. Any other key hides the button and is typed normally; Enter stays a new line. Terminal and browser.
+- Canvas is an endless page: Down, Ctrl+N and Right at the end of a line keep moving past the last line; blank lines and spaces are added only when you type there.
+- Hovering any line of a message always shows the reaction bar: on its header when visible, otherwise on the first visible line of that message, never covering the line under the pointer.
+- Groundwork for presence (who is in a chat or canvas); nothing visible yet.
+
 ## [0.26.272] - 2026-10-18
 
 - Threads, Canvas, SkillPaq and Processes all take 50% of the screen and show two panes at a time. With a thread open, Canvas, SkillPaq or Processes opens on the left and the thread stays on the right; with no thread, the channel stays on the left. Esc closes the top pane and brings back the one it covered, as it was. Terminal and browser.
