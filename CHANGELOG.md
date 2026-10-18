@@ -4,6 +4,14 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.279] - 2026-10-18
+
+- Hovering a message line shows the reaction bar on that same line, at its right end, in the channel and in threads alike (one rule, one code path). It uses the empty space after the text and covers the end of the text only when the line is too full; the text comes back when you move away. Fixes the bar appearing only sometimes in threads.
+- Browser Exact TUI: the terminal now takes the size of your browser window (a phone gets a narrow terminal, a large window a wide one), and resizing the window resizes it. With a real terminal attached too, whichever you typed in last sets the size; your next key in the other one takes it back and redraws.
+- Browser Exact TUI: Ctrl+V and Ctrl+Shift+V paste your clipboard (multi-line and any language) instead of sending a control character.
+- Browser Exact TUI on a phone: a sideways pan stays where you put it, and taps land on the cell you touched. Known gap: at phone width the status bar has no room for the Team button yet; that comes in the next release.
+- Groundwork for browser buttons on the channel members list; nothing visible yet.
+
 ## [0.26.278] - 2026-10-18
 
 - Browser access is now protected: [W Browser] opens you as the owner with a one-time key that becomes a private session cookie (the key itself is never stored in the browser); opening the shell's address without it is refused. The owner key sits in a file only you can read, and its path and the owner link are printed when the shell starts.
