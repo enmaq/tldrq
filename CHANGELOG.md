@@ -4,6 +4,21 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.276] - 2026-10-18
+
+- Browser: a new Exact TUI view shows the whole `tldrq shell` screen exactly as the terminal does (dialogs included), switchable with the existing Web UI. Only changed rows are sent and redrawn; typing, mouse, paste and resize go back to the terminal numbered and confirmed, so a reconnect never loses or repeats a key, and keys sent before a shell restart are shown as not sent instead of replayed.
+- Browser: Alt+Shift+L in the Exact TUI view shows how fast keys appear (last, median, slowest 5%) with lost and pending key counts; a summary is written to `~/.tldrq/shell.log`.
+- Wide characters (Chinese, Japanese, emoji) take exactly two columns in the browser and in programs shown inside tldrq, so rows no longer shift; accented letters stay intact.
+- Browser: a thread's address line no longer overlaps its messages.
+
+## [0.26.275] - 2026-10-18
+
+- Hovering a message line pops up the reaction bar on the line just below the pointer again, never on the line you are hovering (it broke in 0.26.261). A one-line message whose header has scrolled off now gets the bar on the blank line under it.
+- Browser: a plain click on a channel attachment opens a preview (images, text, PDF) or downloads it, so files work in a browser-only session. Ctrl/Cmd-click still reveals the file on the host.
+- Browser: terminal text in the light theme has readable contrast.
+- `tldrq shell --browser --team …` starts straight in the browser, without the terminal "Choose workspace mode" dialog. The browser still asks how to start when no team is given.
+- Groundwork for showing the exact terminal screen in the browser; nothing visible yet.
+
 ## [0.26.274] - 2026-10-18
 
 - Processes and SkillPaq now use the same pane design as Canvas: one header with item tabs (× hides a tab, nothing is deleted), an `[ All … (N) ]` list and an address line, with the large action buttons kept. Every tab shows a plain `Name (N)` count (`…` while loading). Terminal and browser.
