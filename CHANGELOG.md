@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.274] - 2026-10-18
+
+- Processes and SkillPaq now use the same pane design as Canvas: one header with item tabs (× hides a tab, nothing is deleted), an `[ All … (N) ]` list and an address line, with the large action buttons kept. Every tab shows a plain `Name (N)` count (`…` while loading). Terminal and browser.
+- Presence: a chat or canvas header shows coloured initials of who has it open now (they fade after 2 minutes). In a canvas, another person's cursor is marked in their colour without hiding your text, and a chat shows "Alice is typing…" above the composer. Each person keeps one colour everywhere; agents show a seen dot and typing only.
+- The team menu no longer goes empty after a collector restart: running shells re-register on their next heartbeat. Shells started before this version need one reopen.
+
 ## [0.26.273] - 2026-10-18
 
 - Canvas: after 1 s without typing, a large `Finished editing? Press Esc` button appears at the bottom. Esc (or a click) leaves editing and, once your edits are saved, sends agents one "finished editing canvas N" note with the diff right away. Any other key hides the button and is typed normally; Enter stays a new line. Terminal and browser.
