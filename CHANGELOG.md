@@ -4,6 +4,13 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.277] - 2026-10-18
+
+- Browser: rows are exactly one character tall, so coloured backgrounds have no stripes between rows and box-drawing lines join, in both the Web UI and the Exact TUI view.
+- Browser: reversed colours (highlighted title bars in nano, top, less) now show in the Exact TUI view and the Web UI.
+- Browser Web UI: accented letters keep their accents, and every wide emoji takes two columns. One width table, generated from the same rules the terminal uses, now drives tldrq's layout, the terminal output and the browser.
+- Browser: the Exact TUI view works on a phone: the screen shrinks to fit (down to 12 px text) and pans sideways beyond that, a tap opens the keyboard, and the cursor row stays visible while it is open.
+
 ## [0.26.276] - 2026-10-18
 
 - Browser: a new Exact TUI view shows the whole `tldrq shell` screen exactly as the terminal does (dialogs included), switchable with the existing Web UI. Only changed rows are sent and redrawn; typing, mouse, paste and resize go back to the terminal numbered and confirmed, so a reconnect never loses or repeats a key, and keys sent before a shell restart are shown as not sent instead of replayed.
