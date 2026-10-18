@@ -4,6 +4,13 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.272] - 2026-10-18
+
+- Threads, Canvas, SkillPaq and Processes all take 50% of the screen and show two panes at a time. With a thread open, Canvas, SkillPaq or Processes opens on the left and the thread stays on the right; with no thread, the channel stays on the left. Esc closes the top pane and brings back the one it covered, as it was. Terminal and browser.
+- The help screen (`Alt+?`) is easier to read: keys in the accent colour, bold section headings, aligned columns, and a larger window that fits the screen (fewer pages, nothing cut off).
+- `Ctrl+Alt+T` opens Threads, like `Alt+T` (matching `Ctrl+Alt+C/S/P`).
+- Processes: on the Rerun confirmation, Enter now reruns the command and Esc cancels (Enter used to cancel).
+
 ## [0.26.271] - 2026-10-17
 
 - An empty Processes tab says "No commands yet. Run !command in the composer." once, across the whole pane, instead of twice in two columns. The filter hint is shorter ("filter commands") so it fits at 80 columns; a filter with no match says "No matching commands."
