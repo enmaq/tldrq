@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.278] - 2026-10-18
+
+- Browser access is now protected: [W Browser] opens you as the owner with a one-time key that becomes a private session cookie (the key itself is never stored in the browser); opening the shell's address without it is refused. The owner key sits in a file only you can read, and its path and the owner link are printed when the shell starts.
+- Navigators: the owner can create a watch-only link to the Exact TUI view; every key, click or resize from it is refused on the server. The owner can end any session, which also closes its connections.
+- Browser: the Exact TUI view draws long runs of text as one piece instead of one element per cell, so large screens open much faster and use far less memory (a 105×310 tldrq screen: 1,793 elements instead of 97,752).
+
 ## [0.26.277] - 2026-10-18
 
 - Browser: rows are exactly one character tall, so coloured backgrounds have no stripes between rows and box-drawing lines join, in both the Web UI and the Exact TUI view.
