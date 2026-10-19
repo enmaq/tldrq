@@ -4,6 +4,11 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.294] - 2026-10-19
+
+- New workspace names accept any text: spaces and punctuation become `-`, accents and Cyrillic are written in Latin letters, and the result (max 40) shows live under the field; what you typed stays as the display name. A name already in use gets `-2`, `-3`. `--workspace` on the command line uses the same rule but always picks the existing workspace.
+- Ctrl+C and deleting a workspace show the shutdown animation again (each frame is drawn on its own instead of one held-back block), and the browser Exact view redraws even if a program leaves a synchronized-output block open.
+
 ## [0.26.293] - 2026-10-19
 
 - Starting a team with more than one Master no longer fails with "team worker role is already in use" when the chosen Master name is already used by another team: names are checked against every live agent in the project, and a taken name just moves on to the next one.
