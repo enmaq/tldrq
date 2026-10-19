@@ -4,6 +4,14 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.293] - 2026-10-19
+
+- Starting a team with more than one Master no longer fails with "team worker role is already in use" when the chosen Master name is already used by another team: names are checked against every live agent in the project, and a taken name just moves on to the next one.
+
+## [0.26.292] - 2026-10-19
+
+- Form team is back to the three-column layout of 0.26.289 (the one-column form from 0.26.290 is removed); a single Enter forms the Tandem team again.
+
 ## [0.26.291] - 2026-10-19
 
 - Agents whose git goes through the tldrq proxy can push and fetch again: the proxy now asks for credentials with a proper 407 answer (and closes that connection so git reconnects), and wrapped agents get `GIT_SSL_CAINFO` pointing at the proxy's trust bundle, so git accepts the proxy certificate. TLS checks and the proxy stay on; a `GIT_SSL_CAINFO` you set yourself is kept.
