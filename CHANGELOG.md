@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.291] - 2026-10-19
+
+- Agents whose git goes through the tldrq proxy can push and fetch again: the proxy now asks for credentials with a proper 407 answer (and closes that connection so git reconnects), and wrapped agents get `GIT_SSL_CAINFO` pointing at the proxy's trust bundle, so git accepts the proxy certificate. TLS checks and the proxy stay on; a `GIT_SSL_CAINFO` you set yourself is kept.
+
 ## [0.26.290] - 2026-10-19
 
 - When the enmaq servers are unreachable (outage, refused connection, timeout), the shell stays calm: the tldrq logo turns red with a small ⚠ next to it, with no change in width. Clicking either, or Alt+? then O, shows the host, status, since when and the next retry; it returns to normal by itself when the server answers. Nothing is printed over the shell any more: tldrq's own startup and background messages go to `~/.tldrq/shell.log`, and the owner link and token file stay in help.
