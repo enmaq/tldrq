@@ -4,6 +4,15 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.289] - 2026-10-19
+
+- The status bar keeps the Team button at every width: on a narrow terminal or a phone the workspace name and the date go first, so [T] and the urgency control stay and clicking [T] opens the Team menu.
+- Browser Exact TUI: the channel members list has real buttons. Clicking a member toggles it exactly as Space does, and Save/Cancel work like Enter/Esc; the picture stays identical. Watch-only navigators cannot change anything.
+
+## [0.26.280] - 2026-10-18
+
+- The shell browser now opens straight into the Exact TUI. Its legacy Web UI toolbar, dialogs, scripts, and view switch are removed from the page.
+
 ## [0.26.279] - 2026-10-18
 
 - Hovering a message line shows the reaction bar on that same line, at its right end, in the channel and in threads alike (one rule, one code path). It uses the empty space after the text and covers the end of the text only when the line is too full; the text comes back when you move away. Fixes the bar appearing only sometimes in threads.
