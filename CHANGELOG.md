@@ -4,6 +4,14 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.290] - 2026-10-19
+
+- When the enmaq servers are unreachable (outage, refused connection, timeout), the shell stays calm: the tldrq logo turns red with a small ⚠ next to it, with no change in width. Clicking either, or Alt+? then O, shows the host, status, since when and the next retry; it returns to normal by itself when the server answers. Nothing is printed over the shell any more: tldrq's own startup and background messages go to `~/.tldrq/shell.log`, and the owner link and token file stay in help.
+- `tldrq login` and the shell ask you to log in again only when the server really says you are signed out; an outage or an expired token while offline never does.
+- SkillPaq: tldrq notices when a skill has formed (a person says always, never, from now on or remember; the same correction comes twice; the same steps succeed three times) and asks the team's lead master once to propose it or decline with a reason. It uses no AI model, wakes at most once an hour and three times a day, and its rules live in the built-in enmaq/skill-formation pack, which a team can change like any skill.
+- SkillPaq tab shows `(20) · N proposed` when proposals wait for you; every proposal attempt is logged.
+- Form team is one column: tools, one line per role with ‹ N › counts, a single "fits" line (details behind ?), and small Create/Cancel. Fits an 80x24 terminal and a phone.
+
 ## [0.26.289] - 2026-10-19
 
 - The status bar keeps the Team button at every width: on a narrow terminal or a phone the workspace name and the date go first, so [T] and the urgency control stay and clicking [T] opens the Team menu.
