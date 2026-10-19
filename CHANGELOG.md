@@ -4,6 +4,11 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.296] - 2026-10-19
+
+- Browser Exact TUI: Light theme by default (Dark one click or Alt+Shift+T away, remembered per browser); all terminal colours are mapped so text stays readable on light. Scale the cells x1, x1.5, x2, x3 or x4 (header control or Alt+Shift+Z, remembered); bigger cells mean fewer columns, never page overflow. Scales that would leave fewer than 40 columns are greyed out with the reason, and a too-large remembered scale steps down on a small window and comes back when it grows.
+- SkillPaq: the first time a person corrects a rule of an approved skill, the lead master is asked once to propose an updated version (linking the correction, never copying it); skills are never edited silently.
+
 ## [0.26.295] - 2026-10-19
 
 - Forming a team with several Masters retries with a new name when a Master's name gets taken while the team is starting, instead of failing. If it still cannot start a Master, the message says which one, why, and what to do, in plain words.
