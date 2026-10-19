@@ -4,6 +4,11 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.295] - 2026-10-19
+
+- Forming a team with several Masters retries with a new name when a Master's name gets taken while the team is starting, instead of failing. If it still cannot start a Master, the message says which one, why, and what to do, in plain words.
+- SkillPaq: a formed-skill candidate states its scope and conditions, links to the evidence instead of copying the person's text (so exceptions are never cut off), and personal details are removed before it reaches the master.
+
 ## [0.26.294] - 2026-10-19
 
 - New workspace names accept any text: spaces and punctuation become `-`, accents and Cyrillic are written in Latin letters, and the result (max 40) shows live under the field; what you typed stays as the display name. A name already in use gets `-2`, `-3`. `--workspace` on the command line uses the same rule but always picks the existing workspace.
