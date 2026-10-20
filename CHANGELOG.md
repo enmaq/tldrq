@@ -4,6 +4,13 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.301] - 2026-10-20
+
+- SkillPaq pane: channel search (F4), help (Alt+?) and switching to other panes work while it is open, and Esc closes it even after you clicked into the chat.
+- Numbered lists keep numbering when the list starts below other text or a blank line ("Steps:" then "1. …" now continues with "2. "). A line starting with "1. " under prose now starts a list on Enter.
+- SkillPaq skill detector: the same message sent twice (or with only spacing or punctuation changed) no longer counts as a repeated correction; reworded corrections still do.
+- Built-in canvas rule: agents check for an existing canvas on the topic before making a new one, and drop decided options and stale parts when rewriting.
+
 ## [0.26.300] - 2026-10-20
 
 - Likes (Space Space): when a like takes more than 150 ms to show its green flash, one line in the shell log records where the time went (each step, channel size, open thread, incoming messages), so a slow like can be traced. Fast likes write nothing; behaviour is unchanged. Measured on a 4,777-message channel the flash shows in 35-80 ms, even when the server answers 2 s late.
