@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.298] - 2026-10-20
+
+- SkillPaq: each skill version now records how often it was created, reviewed and loaded into an agent's context, with sizes, so whether a skill saves tokens can be measured instead of assumed. Token counts are recorded only when known (never estimated); loading a skill counts as "used", never as "applied". Covers agent onboarding, resumed and reaction wake-ups; shell start-up and context-clear loads are not counted yet.
+
 ## [0.26.297] - 2026-10-19
 
 - Browser Exact TUI: bold text sits exactly in its cells again, so words that mix bold and regular letters no longer show gaps or offset boxes (in every theme and scale; this was off since 0.26.278).
