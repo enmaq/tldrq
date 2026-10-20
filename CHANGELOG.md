@@ -4,6 +4,13 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.302] - 2026-10-20
+
+- Sending in channels no longer freezes typing: the message shows SENDING at once and you can keep typing. When the collector is slow (for example right after a restart) the send retries quietly for up to 10 s with the same message id, so it lands once; "collector unreachable" now appears only when it is really down. Known: if you edit the text while it is sending and the send then fails, the original is kept only in input history (Up) for this session.
+- Canvas tabs work like browser tabs: the top-right [ x ] and the ✕ on the open tab hide it and open the next tab (right, else left), then All canvases when none are left. Hiding another tab keeps your canvas. Deleting from the list returns to the list and says the canvas was deleted (restore still works). No x ever deletes.
+- SkillPaq view: what the skill teaches comes first, sections are separated by thin titled lines, only WHEN / DO / IF are highlighted, and the structure is folded; Space or a click opens it as a tree instead of LISP text.
+- `tldrq skillpaq check FILE` accepts single-file SkillPaqs exactly as the loader does, instead of failing with "invalid pack id".
+
 ## [0.26.301] - 2026-10-20
 
 - SkillPaq pane: channel search (F4), help (Alt+?) and switching to other panes work while it is open, and Esc closes it even after you clicked into the chat.
