@@ -4,6 +4,11 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.299] - 2026-10-20
+
+- Browser Exact TUI: at x1 the page no longer flickers scrollbars on and off twice a second. The view never overflows the window; anything wider is clipped like in a terminal. The x1-x4 sizes are unchanged.
+- Reach another team by name: `@enmaq/tldrq-cloud/tom`, `@tldrq-cloud/tom` or just `@tom`, using the workspace's current name or any earlier name, no Team code needed. The `##` and `@` popups list other teams' masters too, matching loosely (`@enmaq--cclouddd` still finds tldrq-cloud), with recently used names first and each row showing workspace and idle time. A name that matches two teams is refused with both addresses listed, never guessed. Known: recent-use ranking resets on restart, and other teams can take up to 10 s to appear after a shell starts.
+
 ## [0.26.298] - 2026-10-20
 
 - SkillPaq: each skill version now records how often it was created, reviewed and loaded into an agent's context, with sizes, so whether a skill saves tokens can be measured instead of assumed. Token counts are recorded only when known (never estimated); loading a skill counts as "used", never as "applied". Covers agent onboarding, resumed and reaction wake-ups; shell start-up and context-clear loads are not counted yet.
