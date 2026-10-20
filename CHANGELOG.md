@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.300] - 2026-10-20
+
+- Likes (Space Space): when a like takes more than 150 ms to show its green flash, one line in the shell log records where the time went (each step, channel size, open thread, incoming messages), so a slow like can be traced. Fast likes write nothing; behaviour is unchanged. Measured on a 4,777-message channel the flash shows in 35-80 ms, even when the server answers 2 s late.
+
 ## [0.26.299] - 2026-10-20
 
 - Browser Exact TUI: at x1 the page no longer flickers scrollbars on and off twice a second. The view never overflows the window; anything wider is clipped like in a terminal. The x1-x4 sizes are unchanged.
