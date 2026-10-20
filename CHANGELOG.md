@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.304] - 2026-10-20
+
+- SkillPaq review: after Approve, Reject or Unapprove you land back on All SkillPaqs with a one-line receipt ("Approved enmaq/x v2"), and that SkillPaq's tab closes. Errors and blocked approvals stay on the detail as before.
+
 ## [0.26.303] - 2026-10-20
 
 - Processes: two different repositories with the same folder name (for example two checkouts called `app`) no longer share one Processes history; the same repository opened through a symlink keeps one. Existing history is moved once into the matching repository, only for commands that ran inside it; the old file is left untouched.
