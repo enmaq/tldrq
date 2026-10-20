@@ -4,6 +4,11 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.297] - 2026-10-19
+
+- Browser Exact TUI: bold text sits exactly in its cells again, so words that mix bold and regular letters no longer show gaps or offset boxes (in every theme and scale; this was off since 0.26.278).
+- SkillPaq: skills are never deleted or switched off automatically. "Stop doing X" (English or Russian) asks the lead master to retire that skill; a skill unused for 30 days, declined twice, or corrected twice after use is marked dormant for a person to review. Agents report when they actually applied a skill (loading it does not count), and only a person can restore a retired skill.
+
 ## [0.26.296] - 2026-10-19
 
 - Browser Exact TUI: Light theme by default (Dark one click or Alt+Shift+T away, remembered per browser); all terminal colours are mapped so text stays readable on light. Scale the cells x1, x1.5, x2, x3 or x4 (header control or Alt+Shift+Z, remembered); bigger cells mean fewer columns, never page overflow. Scales that would leave fewer than 40 columns are greyed out with the reason, and a too-large remembered scale steps down on a small window and comes back when it grows.
