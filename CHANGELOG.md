@@ -4,6 +4,11 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.303] - 2026-10-20
+
+- Processes: two different repositories with the same folder name (for example two checkouts called `app`) no longer share one Processes history; the same repository opened through a symlink keeps one. Existing history is moved once into the matching repository, only for commands that ran inside it; the old file is left untouched.
+- Built-in canvas rule v3: agents retire a stale canvas to one line pointing at the status canvas, and never compress away an uncertainty, a correction or what a decision waits on.
+
 ## [0.26.302] - 2026-10-20
 
 - Sending in channels no longer freezes typing: the message shows SENDING at once and you can keep typing. When the collector is slow (for example right after a restart) the send retries quietly for up to 10 s with the same message id, so it lands once; "collector unreachable" now appears only when it is really down. Known: if you edit the text while it is sending and the send then fails, the original is kept only in input history (Up) for this session.
