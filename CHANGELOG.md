@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.316] - 2026-10-21
+
+- `tldrq vv` calls no longer get stuck in "checking" when the first connection candidates arrive before the other side's offer or answer: candidates wait until the description is set, and connection errors are logged instead of dropped.
+
 ## [0.26.315] - 2026-10-21
 
 - The name box at the start of the bar has a fixed width, so C1, M1 and the other tabs never shift when a worker with a longer name joins. Before, a click aimed at C1 right after start could land on the gap. Longer names end with "…"; the full name is in [?] and copy.
