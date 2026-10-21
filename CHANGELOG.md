@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.315] - 2026-10-21
+
+- The name box at the start of the bar has a fixed width, so C1, M1 and the other tabs never shift when a worker with a longer name joins. Before, a click aimed at C1 right after start could land on the gap. Longer names end with "…"; the full name is in [?] and copy.
+- The SkillPaq view explains each rule under "How this rule works": WHEN, DO and IF NOT RUN, with a short preview on P that stops on any key, click or resize. All built-in SkillPaqs have it; agents' instructions are unchanged. An empty "RULE 1" heading no longer shows.
+- An urgency confirmation always goes to the collector that started it, even if the collector changes while it is being sent.
+
 ## [0.26.314] - 2026-10-21
 
 - An agent shows as blocked by quota only when its tool says the limit is actually reached. A "less than 25% of your weekly limit left" warning, or chat that merely talks about quotas and resets, no longer marks agents (or their master) as blocked in the Team list and status line.
