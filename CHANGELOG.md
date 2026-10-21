@@ -4,6 +4,14 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.314] - 2026-10-21
+
+- An agent shows as blocked by quota only when its tool says the limit is actually reached. A "less than 25% of your weekly limit left" warning, or chat that merely talks about quotas and resets, no longer marks agents (or their master) as blocked in the Team list and status line.
+
+## [0.26.313] - 2026-10-21
+
+- No code changes; changelog wording only (same program as 0.26.312).
+
 ## [0.26.312] - 2026-10-21
 
 - The power button asks with the CLOSE dialog for a saved master even when its Team configuration is missing or names no owner. Before, such a master was shut down at once, without the dialog or the animation.
