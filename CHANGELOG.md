@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.317] - 2026-10-21
+
+- In the browser view, keys typed before the connection is fully ready are kept and sent in order as soon as it is, instead of being dropped with "not sent". A failed send keeps the keys and retries; the warning clears once input flows again. Only a very full queue (512 waiting inputs) refuses new input, visibly. The first key after the link is ready still goes out at once.
+
 ## [0.26.316] - 2026-10-21
 
 - `tldrq vv` calls no longer get stuck in "checking" when the first connection candidates arrive before the other side's offer or answer: candidates wait until the description is set, and connection errors are logged instead of dropped.
