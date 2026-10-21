@@ -4,6 +4,11 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.307] - 2026-10-21
+
+- Channel views use far less CPU in busy teams: when agents flip between busy and idle, tldrq no longer re-wraps the whole channel history (that change is invisible on screen), and thread counts no longer touch every message. Measured on a 20,000-message channel with frequent events: from 79% of a CPU core to 4.4%. Takes effect when a shell restarts on this version.
+- Team sends retry the same message id for up to 10 s when the local collector times out, without redelivering a message already consumed. If the reply is still missing, the tool reports delivery unknown with the message id instead of an error that invites a duplicate resend. Cross-host sends through the gateway are not yet send-once.
+
 ## [0.26.306] - 2026-10-21
 
 - SkillPaq review works like email: the list is grouped Proposed, In use, Built-in, then Rejected at the bottom. In a proposed SkillPaq, Enter approves and Esc rejects, and you land on the next proposed one each time, so Enter, Enter, Enter walks the whole queue. In the Rejected group, Esc deletes that proposal for good (no confirm; a "Deleted …" line confirms). Esc on approved or built-in SkillPaqs, or on the list, still closes as before. Switched-off workspace SkillPaqs show dimmed at the end of In use.
