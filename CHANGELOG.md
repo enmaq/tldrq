@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.306] - 2026-10-21
+
+- SkillPaq review works like email: the list is grouped Proposed, In use, Built-in, then Rejected at the bottom. In a proposed SkillPaq, Enter approves and Esc rejects, and you land on the next proposed one each time, so Enter, Enter, Enter walks the whole queue. In the Rejected group, Esc deletes that proposal for good (no confirm; a "Deleted …" line confirms). Esc on approved or built-in SkillPaqs, or on the list, still closes as before. Switched-off workspace SkillPaqs show dimmed at the end of In use.
+
 ## [0.26.305] - 2026-10-20
 
 - Sending in channels uses a queue: Enter saves the message locally and empties the composer at once (a few ms, without waiting for a disk flush), the message waits in a one-line queue above the composer, and tldrq keeps retrying (1 s up to 30 s) with the same message id until it is delivered, also after a tldrq restart, in order per channel and never twice. A rejected message shows `Failed · Retry / Edit` and holds back only its own channel. Typing more while a message is sending can no longer merge two messages. Replies and threads use the queue too; attachments follow later. Known: queued messages survive a tldrq crash or kill, but a power loss or OS crash can lose the last few; a crash within milliseconds of pressing Enter can bring the draft text back.
