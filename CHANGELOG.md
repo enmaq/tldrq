@@ -4,6 +4,30 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.312] - 2026-10-21
+
+- The power button asks with the CLOSE dialog for a saved master even when its Team configuration is missing or names no owner. Before, such a master was shut down at once, without the dialog or the animation.
+
+## [0.26.311] - 2026-10-21
+
+- The Team pass also renews after you reopen an existing workspace. In 0.26.310 a reopened shell could reconnect after a collector restart without renewing, so SkillPaq proposals still failed with "stale Team token". It now renews once on the first successful reconnect; a failed renewal waits for the normal reconnect delay instead of retrying in a loop.
+- Closing tldrq plays the animation and hands the terminal back reliably. About one close in three still lost the animation, once with a 24 s wait: when CLOSE stopped a worker, the worker's cleanup also removed the master's session before it could restore the screen. Each session now cleans up only its own record.
+- The Team menu stays open while channel history finishes loading after start. Before, the loaded history could paint over the menu and make it vanish; history now updates underneath and shows when the menu closes.
+- The real-path release check now starts from a copy of an existing team (Welcome back, REOPEN, no Form team), the way a normal day starts.
+
+## [0.26.310] - 2026-10-21
+
+- The old web UI is gone. The browser shows the same screen as the terminal (Exact view) for the Teams menu, Form team, channels and canvases; the old HTML pages, `/console`, `/ws` and their REST endpoints are removed (they return 404). Not in the browser yet: file upload, image paste and inline attachment previews.
+- `tldrq channel read` and `reply` accept `C1`-style names, and a failing `tldrq` command always prints its error, even in shells that log diagnostics to a file. Before, `channel read C1` failed silently there.
+- An agent's Team pass is renewed automatically when its shell reconnects after a collector restart, so actions such as proposing a SkillPaq keep working. Before, a pass signed by an earlier collector was refused with the misleading "active Team member only"; if renewal ever fails, the error now says "stale Team token" and to restart that agent's tab.
+- The real-path release check reads the expected version from the build, so it needs no manual update per release.
+
+## [0.26.309] - 2026-10-21
+
+- Urgency follows what you say: an explicit P0 to P3 wins (P0 is capped at High), and calm words such as "no rush" or "take your time" lower it. "Out for the night" on its own changes nothing. Only human messages count; quoted text and talk about levels never do. When the level changes, C1 gets one line saying so. The words live in the built-in urgency SkillPaq, so a workspace can override them; a broken override changes nothing and shows the error.
+- `tldrq code search --body none` (and `body_mode=none` for agents) returns only file, line and column, never source text. Before, it still printed the matched line and nearby lines, which could expose secrets in a repo. The default compact output keeps plain function and method names but no source text.
+- New pre-release check of the real daily path (startup, channel history, one send, SkillPaq list, a canvas, closing tldrq) runs before every release (`./test.sh your-path`).
+
 ## [0.26.308] - 2026-10-21
 
 - Closing tldrq (power button or Ctrl+C, then CLOSE) plays the shutdown animation and hands your terminal back without a key press in the normal supervised mode too. Before, tldrq stopped itself with a kill signal in that mode, so it quit with no animation and the screen could stay stale. Stopping a session from outside with `tldrq stop` is unchanged.
