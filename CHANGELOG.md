@@ -4,6 +4,13 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.305] - 2026-10-20
+
+- Sending in channels uses a queue: Enter saves the message locally and empties the composer at once (a few ms, without waiting for a disk flush), the message waits in a one-line queue above the composer, and tldrq keeps retrying (1 s up to 30 s) with the same message id until it is delivered, also after a tldrq restart, in order per channel and never twice. A rejected message shows `Failed · Retry / Edit` and holds back only its own channel. Typing more while a message is sending can no longer merge two messages. Replies and threads use the queue too; attachments follow later. Known: queued messages survive a tldrq crash or kill, but a power loss or OS crash can lose the last few; a crash within milliseconds of pressing Enter can bring the draft text back.
+- Closing tldrq: the power button keeps a fixed spot at the right edge of the bar even when the bar is crowded (the clock gives way first), so clicking where it was no longer opens the clock screen. After CLOSE, a "Closing N agents" line appears at once and counts down while agents stop (up to the existing 3 s grace), then the animation plays and tldrq exits by itself; the final session save no longer holds the exit for more than 0.5 s.
+- Dialogs no longer vanish while still open: a terminal resize (window change, tab switch, wake) used to redraw the screen over an open dialog such as Close, leaving it invisible but still taking keys, so the screen looked frozen until a key was pressed. The redraw now leaves every open dialog visible.
+- Proxy memory: shells now ask each proxy only for the last 15 minutes of events when showing model activity, instead of the whole event log every 5 s; long-running proxies no longer grow to gigabytes. Restart existing proxies (or the shell) to pick it up.
+
 ## [0.26.304] - 2026-10-20
 
 - SkillPaq review: after Approve, Reject or Unapprove you land back on All SkillPaqs with a one-line receipt ("Approved enmaq/x v2"), and that SkillPaq's tab closes. Errors and blocked approvals stay on the detail as before.
