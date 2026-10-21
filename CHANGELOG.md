@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.308] - 2026-10-21
+
+- Closing tldrq (power button or Ctrl+C, then CLOSE) plays the shutdown animation and hands your terminal back without a key press in the normal supervised mode too. Before, tldrq stopped itself with a kill signal in that mode, so it quit with no animation and the screen could stay stale. Stopping a session from outside with `tldrq stop` is unchanged.
+- The shared tldrq collector belongs to the home folder that started it. A leftover test shell with a different HOME could restart it under that HOME, after which human-only actions (such as listing SkillPaqs) failed with "human approval only" and the SkillPaq list looked empty. A shell with a different HOME now never adopts, restarts or replaces a running collector; it stops with an error naming the home-folder mismatch. The SkillPaq pane shows Loading or the full error instead of an empty list. Test collectors on their own port keep their own HOME.
+- Clicking the tldrq logo flashes again while the collector is unreachable; the outage paint used to cover the flash.
+
 ## [0.26.307] - 2026-10-21
 
 - Channel views use far less CPU in busy teams: when agents flip between busy and idle, tldrq no longer re-wraps the whole channel history (that change is invisible on screen), and thread counts no longer touch every message. Measured on a 20,000-message channel with frequent events: from 79% of a CPU core to 4.4%. Takes effect when a shell restarts on this version.
