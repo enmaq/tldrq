@@ -4,6 +4,11 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.319] - 2026-10-22
+
+- Detail levels, first slice: a `[UI n]` control in the bottom bar (before the traffic meter) sets how much each message row shows, from 1 (sender and text) to 5 (everything, exactly as before). Click to cycle; the screen updates at once and keeps your draft and cursor; the level is saved per workspace. In between, hidden parts appear when you hover or select a row, and the time shows from level 2 (on hover at level 1). New users start at 1, existing users at 5. Other screens follow.
+- tldrq reports each of your machines to the platform (a random machine id, host name, version and workspace names, at start and every 5 minutes), so the TLDRQ page can list your machines. Logged-out machines send nothing; failures are silent.
+
 ## [0.26.318] - 2026-10-21
 
 - Typed letters show instantly (predicted) in dialog fields such as the Open workspace search, as they already do in the C1 composer. Before, those fields drew their own cursor, so the browser view never predicted there.
