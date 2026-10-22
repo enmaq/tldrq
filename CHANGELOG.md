@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.320] - 2026-10-22
+
+- Fixed: at level 5 the bottom bar again shows everything it showed before 0.26.319 (token stats, battery, search, idle, clock). The new [UI n] control had taken their space; now it only uses free space, then shortens to [5] (or a single digit on narrow screens), and never removes another part. Token stats show at levels 4 and 5.
+- Detail levels, slice 2: both bars follow the level. Bottom bar: level 1 keeps the logo, workspace, your name, update notice, tabs, [T], idle, [UI n], [?] and power; style and urgency come at 2, the tool buttons and clock at 3, search and proxy at 4, the token stats at 4 and 5. Channel top bar: level 1 shows the chat name and what is known about the team; buttons and details return level by level. Hover shows the hidden parts; nothing moves when data arrives. Reactions and threads show at every level; the ASK button from level 2.
+- Pasted screen text no longer changes urgency: a copied bar containing "[ U: P1 HIGH ]" set urgency to P1 by mistake.
+
 ## [0.26.319] - 2026-10-22
 
 - Detail levels, first slice: a `[UI n]` control in the bottom bar (before the traffic meter) sets how much each message row shows, from 1 (sender and text) to 5 (everything, exactly as before). Click to cycle; the screen updates at once and keeps your draft and cursor; the level is saved per workspace. In between, hidden parts appear when you hover or select a row, and the time shows from level 2 (on hover at level 1). New users start at 1, existing users at 5. Other screens follow.
