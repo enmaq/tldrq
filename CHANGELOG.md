@@ -4,6 +4,15 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.321] - 2026-10-22
+
+- Threads on tall or narrow terminals (phones, portrait screens, under 132 columns) open full screen instead of in a half pane; typing goes straight into the thread. Wide screens keep the split.
+- The dotted separator row no longer disappears when a thread opens.
+- Browser view: the zoom dropdown is replaced by in-page − ×n + buttons, which also work where the browser blocks its own menus (cars, kiosks). Saved zoom, the 40-column limit and Alt+Shift+Z still work.
+- Busy machines: many agents polling at once no longer get "collector busy". Empty polls no longer take the database write lock, and the last-seen time is saved at most every 10 seconds.
+- Four new built-in skills from this week's work: ship-safely, ui-no-surprises, verify-before-claiming and ask-before-building.
+- SkillPaq usage: tldrq counts which skills were loaded and applied each day and sends the counts hourly, so we can see which skills help. No names, text or personal data: built-in skills by name, your own skills only as a one-way fingerprint. On by default; turn off with `tldrq skillpaq usage off` or Settings, Share usage.
+
 ## [0.26.320] - 2026-10-22
 
 - Fixed: at level 5 the bottom bar again shows everything it showed before 0.26.319 (token stats, battery, search, idle, clock). The new [UI n] control had taken their space; now it only uses free space, then shortens to [5] (or a single digit on narrow screens), and never removes another part. Token stats show at levels 4 and 5.
