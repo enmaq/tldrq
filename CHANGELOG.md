@@ -4,6 +4,15 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.324] - 2026-10-23
+
+- The token total in the bottom bar survives restarts again (a new proxy could not load the saved totals while an old one held a lock).
+- Run buttons: none below level 5; at level 5 only Steer and Complete while work runs. Steer works now (it did nothing before): it opens the message box in steer mode and Enter sends the steer to the running work.
+- Workers who joined before a run started can be given work.
+- Everything you can click keeps its [ ] at every level; the level control reads [ UI-Level n ] (short [ UI n ] when space is tight, never a bare digit). Buttons keep the same place at every level.
+- One close rule for Threads, Canvas, Processes and SkillPaq: the top-right [×] closes the pane and keeps its tabs; a tab's × closes that tab; closing the last tab closes the pane.
+- New built-in skill todo-tickets: one ticket per piece of work, kept in step with the domain's TODO.md.
+
 ## [0.26.323] - 2026-10-23
 
 - Plain words at detail levels 1 and 2, written so a 5th grader (level 1) or a 9th grader (level 2) can use them: "Simple 1" / "Simple 2" for the level control, "Send · Shift+Enter: new line", "Enter sends · Alt+? shortcuts", "active 2 min ago", "open for 2 min" / "no finish time yet", "Urgent 1", "Style N · Urgency 2", "Guest", "Help", "Big text", and the side tabs written out (Threads at level 1; Threads, Canvas, Skills, Processes at level 2). Narrow screens drop whole optional words instead of shortening them. Levels 3 to 5 keep today's labels.
