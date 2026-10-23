@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.325] - 2026-10-23
+
+- A chat message ending in a backslash could stop a whole team chat from waking its masters: every later message stayed undelivered (seen in the tldrq-cloud chat since 16:26 UTC). The reader now handles escaped backslashes, and one message that still cannot be read is skipped with a log line while the rest are delivered.
+
 ## [0.26.324] - 2026-10-23
 
 - The token total in the bottom bar survives restarts again (a new proxy could not load the saved totals while an old one held a lock).
