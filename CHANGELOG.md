@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.327] - 2026-10-23
+
+- A message an agent receives from inside a thread now starts with that thread ([in thread #N "topic"]), so agents stop answering in the wrong thread.
+- Chat words for runs: the master runs steer:, stop, complete, pause and resume when you type them; pause and resume are new master-only commands.
+- Below level 5 the run status block no longer appears and no longer pushes the chat down when a run starts; the steer hint shows once.
+
 ## [0.26.326] - 2026-10-23
 
 - The UI level is kept when the same project is opened through a symlinked path (it used to start again at level 1). Each new shell now logs which repo, workspace and level it loaded.
