@@ -4,6 +4,14 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.323] - 2026-10-23
+
+- Plain words at detail levels 1 and 2, written so a 5th grader (level 1) or a 9th grader (level 2) can use them: "Simple 1" / "Simple 2" for the level control, "Send · Shift+Enter: new line", "Enter sends · Alt+? shortcuts", "active 2 min ago", "open for 2 min" / "no finish time yet", "Urgent 1", "Style N · Urgency 2", "Guest", "Help", "Big text", and the side tabs written out (Threads at level 1; Threads, Canvas, Skills, Processes at level 2). Narrow screens drop whole optional words instead of shortening them. Levels 3 to 5 keep today's labels.
+- The Iterate, Status and machine-resources buttons are gone from the bottom bar. Their jobs stay: say "iterate", "status" or "resources" in chat, the health and resource warnings colour the ▗ logo, and clicking the token stats (or the battery) shows machine resources under the traffic numbers.
+- "New build, close and reopen" is now a small [⟳] next to the idle time, in a slot that is always reserved so nothing moves; click it for the message.
+- Chat words start what the hidden buttons did: "ask!me" or "grill me" starts the decision interview (new `tldrq askme start`), "status", "iterate", and "resources" (new `tldrq system resources`). A built-in skill lists them.
+- Phones and narrow terminals: every message shows its time and a Thread button again (the name is shortened with … instead).
+
 ## [0.26.322] - 2026-10-23
 
 - Messages no longer jump when you hover them: at every detail level each part of a message is either shown or hidden, never shown only on hover. Levels 1 to 3 show the full name, time, text, attachments, long-message fold, reactions and threads; the model tag from 3; reply, delete and receipts from 4; routing and quotes at 5. Level 5 is unchanged.
