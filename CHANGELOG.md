@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.322] - 2026-10-23
+
+- Messages no longer jump when you hover them: at every detail level each part of a message is either shown or hidden, never shown only on hover. Levels 1 to 3 show the full name, time, text, attachments, long-message fold, reactions and threads; the model tag from 3; reply, delete and receipts from 4; routing and quotes at 5. Level 5 is unchanged.
+- SkillPaq usage: the first report goes out 5 minutes after tldrq starts, then hourly, so a fresh start reports soon instead of after an hour.
+- New built-in skill owner-decisions: when you decide how something must look or behave, agents keep your words in one checklist and check every line before saying done.
+
 ## [0.26.321] - 2026-10-22
 
 - Threads on tall or narrow terminals (phones, portrait screens, under 132 columns) open full screen instead of in a half pane; typing goes straight into the thread. Wide screens keep the split.
