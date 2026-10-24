@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.331] - 2026-10-24
+
+- With "Share usage" on, the hourly SkillPaq usage report also counts button clicks per screen path and UI level (no labels, names or message text), so buttons nobody clicks can be found and removed. Dialog and settings buttons are not counted yet.
+- Joining a Team from the cockpit or through MCP registers the shell first, or says exactly what is missing, the same as the shell start path already did.
+- New built-in skills: enmaq/canvas-debates (agents debate on one canvas per question, with sources and a skeptic, and the master writes the decision at the top) and enmaq/clear-workers (masters clear a worker's context when its ticket is released and at the end of a wave, with the right command for Claude or Codex).
+
 ## [0.26.330] - 2026-10-24
 
 - A team chat whose wake delivery fails is retried (5 s, 30 s, 2 min, then every 10 min) instead of going silent, and tldrq status shows "chat wake late: <chat> since <time>" when a chat has waited more than 5 minutes.
