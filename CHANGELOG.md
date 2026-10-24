@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.339] - 2026-10-24
+
+- The background collector no longer inherits a shell's private tldrq proxy, so machine presence (the web "Online" state), notifications and usage reports keep reaching the server after a collector is started from a shell. A failed presence report is logged once per change, with its reason.
+
 ## [0.26.337] - 2026-10-24
 
 - Only shells a person drives (the Team cockpit and its masters) connect to the web relay; worker shells spawned by a master no longer appear in the web session list or use relay links.
