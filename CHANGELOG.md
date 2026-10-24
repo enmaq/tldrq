@@ -4,6 +4,22 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.343] - 2026-10-24
+
+- Channel header is simpler: one [ Team ] button opens People and Settings (Config Team and Members are inside it); the "TEAM ·" label and the INSIGHTS button are gone (type "insights" to open that view); Steer and Complete are gone from the header (use the chat words "steer:", "complete", "stop"), so each member's activity words line up under that member again.
+- During a run one plain line says "Working on 1 task · 3 done [ Show tasks ]"; the budget appears only past 80%.
+- Your own messages sit on a light block so they stand out from agent messages, in light and dark themes.
+- At beginner UI levels, member chips show plain role words, and a click shows role, model and effort with a one-line explanation.
+- "Typing…" and "thinking…" show inside the thread where they happen, not only in the channel.
+- Light theme: agent text and headers are fully readable (some words used to be faint).
+- New built-in pack enmaq/batch-release: when a person tests a batch, it ships as one release, tested once.
+- New built-in pack enmaq/one-ticket-never-blocks: a ticket that fails the full test is rolled back and the rest of the batch ships; changes to shared screen parts run that part's tests and a compile for every shipped platform before sealing.
+- The built-in enmaq/todo-tickets pack is generic: it no longer names our own project folders and ticket prefixes; each project's ticket folder sets its own.
+- While your last request is scrolled out of view, a one-line bar at the top of the channel or thread shows it; click to jump back. A "↓ N new" button jumps to the end.
+- Long messages fold under "Show more" (yours after 3 lines, agents' after 6); the two newest agent answers in each chat or thread always stay open.
+- Each delegated task shows "<worker> started: <item>" and "<worker> finished: <item>" in the channel (Natural, Structured and Verbose styles; not in Succinct).
+- Agents post one plain sentence when they finish a step of their plan (Natural and Verbose), and a new built-in pack explains each Team role in plain words.
+
 ## [0.26.341] - 2026-10-24
 
 - While an agent works on a message from a channel, that channel shows "doyle is thinking…" until it answers.
