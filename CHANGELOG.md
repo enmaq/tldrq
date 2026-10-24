@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.328] - 2026-10-23
+
+- Shells register themselves with the tldrq gateway before joining their team, so the "gateway registration failed (400)" warning every team showed since 19 Oct is gone and other machines can see the team again.
+
 ## [0.26.327] - 2026-10-23
 
 - A message an agent receives from inside a thread now starts with that thread ([in thread #N "topic"]), so agents stop answering in the wrong thread.
