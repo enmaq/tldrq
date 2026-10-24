@@ -4,6 +4,13 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.333] - 2026-10-24
+
+- Clicks in the member picker, settings, Team menu and confirmation dialogs are now counted too (fixed paths only, no text or names). Dialogs not yet counted are marked so they are never reported as unused.
+- A master can clear its own context: `tldrq team control clear --reason "<status canvas; tickets>" self`. The clear waits until the master is idle and is refused while it still waits for answers, has unsent messages or runs a Team iteration; the reason comes back as the first message after the clear.
+- A shell logged in to one server no longer shows Guest when an unrelated server rejects a request.
+- Model health push notifications carry the model name (claude, codex), so the notification can say which model is down instead of "Platform".
+
 ## [0.26.332] - 2026-10-24
 
 - A logged-in tldrq shell keeps a connection out to your account, so you can open your own running sessions from web tldrq. It reconnects on its own after a server restart.
