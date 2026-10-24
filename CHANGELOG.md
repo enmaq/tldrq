@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.334] - 2026-10-24
+
+- Clicks in the Team form, Help and the resource and traffic popups are counted too. The external login flow is not part of the app and is not counted.
+- Text in tldrq messages and skills keeps every backslash and quote exactly, also for text built by tldrq itself.
+- Idle Codex workers can be cleared: the clear no longer mistakes Codex's empty prompt placeholder for a busy worker.
+
 ## [0.26.333] - 2026-10-24
 
 - Clicks in the member picker, settings, Team menu and confirmation dialogs are now counted too (fixed paths only, no text or names). Dialogs not yet counted are marked so they are never reported as unused.
