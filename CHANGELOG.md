@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.336] - 2026-10-24
+
+- The web relay logs why a connection is refused: "auth refused 403, paused", "update required 404", or the handshake status code before a retry, once per change instead of a generic failure on every retry.
+
 ## [0.26.334] - 2026-10-24
 
 - Clicks in the Team form, Help and the resource and traffic popups are counted too. The external login flow is not part of the app and is not counted.
