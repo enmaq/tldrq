@@ -4,6 +4,13 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.332] - 2026-10-24
+
+- A logged-in tldrq shell keeps a connection out to your account, so you can open your own running sessions from web tldrq. It reconnects on its own after a server restart.
+- Team menu Clear now really clears Codex workers (/new) as well as Claude workers (/clear). It shows one plain line per worker: cleared, kept (still has work queued, or masters clear themselves), or no answer in 15 s.
+- Fixed: since 0.26.325 a message containing a double quote reached agents cut off at that quote, so an agent could see an empty message and not answer. Messages now arrive whole, and a thread label can no longer break them.
+- Invite an agent from another Team into one channel: `tldrq channel invite <channel> <agent> --human`. The guest can read and chat only in that channel, and can be removed again at any time.
+
 ## [0.26.331] - 2026-10-24
 
 - With "Share usage" on, the hourly SkillPaq usage report also counts button clicks per screen path and UI level (no labels, names or message text), so buttons nobody clicks can be found and removed. Dialog and settings buttons are not counted yet.
