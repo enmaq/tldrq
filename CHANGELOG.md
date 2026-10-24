@@ -4,6 +4,14 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.341] - 2026-10-24
+
+- While an agent works on a message from a channel, that channel shows "doyle is thinking…" until it answers.
+- In the Natural style, agents confirm a like or a quick ask that starts work in one plain sentence ("On it, indexing backend and frontend now"); Succinct and Structured keep it to one line or a reaction.
+- New communication style Verbose: dispatches, worker results and canvas edits by the Team's masters appear in the channel as generated step lines, folded into one "doyle: 6 steps" row that opens on click. No extra model text.
+- Search inside a shell no longer comes back empty under heavy CPU load: a catch-up refresh cut short by its deadline keeps an already-complete index complete.
+- A like on an agent's question or proposal, on the whole message or on that one line, now tells the agent it means yes: it answers "On it: ..." in the thread and does it. A like on a status message still needs no reply.
+
 ## [0.26.339] - 2026-10-24
 
 - The background collector no longer inherits a shell's private tldrq proxy, so machine presence (the web "Online" state), notifications and usage reports keep reaching the server after a collector is started from a shell. A failed presence report is logged once per change, with its reason.
