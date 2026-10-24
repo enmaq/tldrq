@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.337] - 2026-10-24
+
+- Only shells a person drives (the Team cockpit and its masters) connect to the web relay; worker shells spawned by a master no longer appear in the web session list or use relay links.
+
 ## [0.26.336] - 2026-10-24
 
 - The web relay logs why a connection is refused: "auth refused 403, paused", "update required 404", or the handshake status code before a retry, once per change instead of a generic failure on every retry.
