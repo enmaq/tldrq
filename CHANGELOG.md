@@ -4,6 +4,14 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.330] - 2026-10-24
+
+- A team chat whose wake delivery fails is retried (5 s, 30 s, 2 min, then every 10 min) instead of going silent, and tldrq status shows "chat wake late: <chat> since <time>" when a chat has waited more than 5 minutes.
+
+## [0.26.329] - 2026-10-23
+
+- At detail levels 1 and 2 on narrower screens (37-99 columns) the top bar keeps "no finish time yet" visible while a run is active (it used to disappear).
+
 ## [0.26.328] - 2026-10-23
 
 - Shells register themselves with the tldrq gateway before joining their team, so the "gateway registration failed (400)" warning every team showed since 19 Oct is gone and other machines can see the team again.
