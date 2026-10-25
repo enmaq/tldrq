@@ -4,6 +4,17 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.344] - 2026-10-24
+
+- "↓ N new" now counts the messages that arrived since you last read the channel or thread (not your own), and a thin "new" line marks the first unread message.
+- A message sent to a name that matches no Team member is refused with that name and close matches (for example eng2-madeline) instead of being reported as delivered; members who are offline still get it later.
+- In the Verbose style, an agent's saved canvas shows as one step with the canvas link.
+- Skill candidates read plainly in the master's review: your own sentence, who reviews it and how old it is, no JSON; an unreviewed candidate is re-sent once after 2 hours and marked overdue after 24; declining or proposing removes it.
+- Every SkillPaq rule now needs its "How this rule works" (when / do / if not run): proposing, editing or approving a rule without one is refused, and a workspace pack missing it is named once at load. The skill-formation summary asks for rules any team could use.
+- In the browser view, the cursor is a filled block in reversed colours that blinks, hollow and still when the page is not focused, steady while you type and for people who turn animations off, so you can see which field has focus.
+- New built-in pack enmaq/work-principles: tickets of about 20 minutes, all started at once on separate workers on a fixed base, one combined test and one fix round, with the human looking at the screens during the test.
+- New `./test.sh quick` pre-seal check: the tests owned by the changed files, vet, and the release-target check, in about a minute.
+
 ## [0.26.343] - 2026-10-24
 
 - Channel header is simpler: one [ Team ] button opens People and Settings (Config Team and Members are inside it); the "TEAM ·" label and the INSIGHTS button are gone (type "insights" to open that view); Steer and Complete are gone from the header (use the chat words "steer:", "complete", "stop"), so each member's activity words line up under that member again.
