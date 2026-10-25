@@ -4,6 +4,15 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.358] - 2026-10-25
+
+- A shell started before you log in now joins the web sessions list once you log in (the relay retries every 30 seconds instead of switching off for good), and the shell log says once why the relay is off (not logged in, certificate trust failure, ...), never with tokens or URLs.
+- Browser view (TUI2WUI): the first page fills the whole window without switching the scale (it re-fits when the view attaches, after fonts load and on every resize), and the text cursor is black or white against its cell in both themes.
+- Bottom bar: the team button reads [ W Workers ] and the browser button [ B Browser ] next to [ C Channels ] on wide terminals (compact [W] [C] [B] below about 160 columns).
+- The humans-rituals-and-psychology SkillPaq is now mostly Lisp: a `shapes` part maps each measured signal (repeat, burst, gap, long absence, stress) to a one-line reply shape that the wake line carries, and a `meaning` part lists twelve one-line answers for what the agent reads in a message (thanks, stepping away, a light moment...). The pack text is 25% shorter; the basis of each entry lives in scripts/humans-study/README.md.
+- Human signals no longer match fixed word lists ("tea", "чай", "eta"…): the wake tag carries only language-free measurements (bursts, gaps, repeated asks, ?! and capitals), and the agent reads what a message means in any language. A first message after silence is skipped when the person's last message says they stepped away.
+- The SkillPaq pane uses the same header as the Threads and Canvas panes: "All SkillPaqs (20 · 2 proposed)", open packs as tabs and a close button, without the extra [ Processes ] [ Threads ] [ Canvas ] [ SkillPaq ] row.
+
 ## [0.26.356] - 2026-10-25
 
 - The bottom-bar traffic button reads [ Σ 12B · 2.2M/h ] (total, then the last hour), and UI-Level now sits before the idle time, in the same place whether idle shows 1m or 59m.
