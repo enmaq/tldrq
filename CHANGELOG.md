@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.349] - 2026-10-25
+
+- The web relay gets one session per tldrq shell a person started: only the Team's primary master dials; further master sessions in the same window no longer show up as extra rows.
+
 ## [0.26.348] - 2026-10-25
 
 - tldrq reads simple signals from a person's messages, with no model: a burst of quick messages, a long gap, an ask repeated after no answer, stress words, stepping away. When one fires, the agent gets one short line (at most 120 bytes), for example "human: burst 4 · stress high · repeat of #5541 · humor 0 now"; nothing is added for normal messages. Thresholds and cue words come from the humans-rituals-and-psychology SkillPaq, so a workspace can tune them.
