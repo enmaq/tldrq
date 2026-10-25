@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.362] - 2026-10-25
+
+- `tldrq shell --profile sample`: Run is no longer blocked on small trial machines (capacity is a hint, as in the normal picker), and Advanced opens the normal picker instead of ending the session.
+
 ## [0.26.361] - 2026-10-25
 
 - A fresh Tandem team answers the first human ask right away: no work round is opened until there is real work, and an agent refused by team-run calls is told to reply in the channel instead of retrying.
