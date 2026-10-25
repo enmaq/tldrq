@@ -4,6 +4,18 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.360] - 2026-10-25
+
+- Bottom bar: the same buttons in the same order at every UI level: `[ W Workers ] [ C Channels ] [ B Browser ]` on the left; `[⌕ Search ] [Prx •] [ UI-Level N ] [ help ]`, the clock with idle time in brackets (`20:36 Oct25 (1m)`) and power on the right. Below 160 columns both sides go compact, 160-199 keeps the right side in words, 200+ shows words everywhere. UI-Level never moves as idle or traffic changes; clicks hit the same cells in the terminal and the browser view.
+- "X is thinking…" above the composer now scrolls what each busy agent is doing, side by side (blue), using the same running-text component as the channel header (yellow), which now shows at every UI level.
+- SkillPaqs are protected: built-in and installed packs are stored compressed in the binary; `skillpaq show`/`preview`, MCP, the catalog and the Skills pane show a plain summary (what it does, who it applies to, whether it's active) and the rule graph only with `--graph`, never rule text. Claude gets protected rules only through the local proxy; Codex and Muse keep free built-in rules in plain text; paid packs say "not available here; works in Claude" instead of falling back.
+- The proxy no longer skips licensed rules when a message contains the public marker text, and refuses WebSocket requests in a licensed session with a clear reason.
+- `tldrq shell --profile sample` starts a trial sample with one "Run sample" confirmation (Advanced opens the usual picker); a second Run resumes.
+- Unanswered-message nudges and badges: an answer by any Team master clears the message, and a reply to the latest message of a burst answers the whole burst.
+- Any Team master can react to a human message (reactions were refused for co-masters).
+- `tldrq channel rules CH --json` only reads; writing needs `--set TEXT` (it used to save "--json" as the rules).
+- MCP `channel_reply` can open a new thread (`new_thread`, `topic`); `channel reply --help` lists `--new-thread` and `--topic`, and the thread-topic rule tells agents to check help before saying something is unsupported.
+
 ## [0.26.359] - 2026-10-25
 
 - A model's short rate limit (or "provider down") no longer sends a push notification; it stays on the member card. Pushes about model health are sent only when credentials are rejected and you need to act.
