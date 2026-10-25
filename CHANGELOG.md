@@ -4,6 +4,14 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.345] - 2026-10-25
+
+- The built-in quick-status status format now leads with what is needed from the owner, gives evidence and what is not verified in every note, lists every release with its Pacific time from the release record, and ends with Facts and Corrections lines; customer-neutral wording.
+- Masters always get the status format and the link to the status canvas that is actually kept, refreshed on every wake, not only at start.
+- No more "started / finished: work item" lines in the human channel. In the Verbose style, work steps go only into the thread the request came from, only for named work between a Team's own master and worker.
+- Humor dial: type "humor 50" (0, 25, 50, 75, 100; default 25) and agents allow a light touch in relaxed moments, never on failures, decisions or late work. Honesty is fixed at 100 %.
+- Esc closes an open completion popup first (your text stays), then clears the composer with Ctrl-Z to undo, and only an empty composer closes the thread. A [ clear ] button sits next to [A+] while there is text.
+
 ## [0.26.344] - 2026-10-24
 
 - "↓ N new" now counts the messages that arrived since you last read the channel or thread (not your own), and a thin "new" line marks the first unread message.
