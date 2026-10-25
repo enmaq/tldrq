@@ -4,6 +4,11 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.353] - 2026-10-25
+
+- A new tldrq release now counts as a reason for the master's "Worth opening?" opener after a long silence, if that channel has not been told about it yet. The release comes from the signed server list, never from the installed binary; each channel starts silently from the release current when it is first checked.
+- `tldrq channel send|say|reply --release-version VERSION` (and MCP release_version) records which release a post announced; the operating-model release sub-skill tells masters to use it.
+
 ## [0.26.352] - 2026-10-25
 
 - `./test.sh quick` also runs the -short tests of every package that imports a changed package, and the named slow PTY tests a changed file owns (third column in scripts/quick-tests.map); it prints the selection first. Its change list `.quick-changed` is git-ignored and deleted after use.
