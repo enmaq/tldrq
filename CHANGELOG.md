@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.361] - 2026-10-25
+
+- A fresh Tandem team answers the first human ask right away: no work round is opened until there is real work, and an agent refused by team-run calls is told to reply in the channel instead of retrying.
+
 ## [0.26.360] - 2026-10-25
 
 - Bottom bar: the same buttons in the same order at every UI level: `[ W Workers ] [ C Channels ] [ B Browser ]` on the left; `[⌕ Search ] [Prx •] [ UI-Level N ] [ help ]`, the clock with idle time in brackets (`20:36 Oct25 (1m)`) and power on the right. Below 160 columns both sides go compact, 160-199 keeps the right side in words, 200+ shows words everywhere. UI-Level never moves as idle or traffic changes; clicks hit the same cells in the terminal and the browser view.
