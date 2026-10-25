@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.351] - 2026-10-25
+
+- After a person has been quiet across the whole workspace longer than the Initiative dial allows (low 8 h, normal 3 h, high 1 h; default low), the Team's master gets one "Worth opening?" wake when there is a recorded reason: an unanswered question or blocker, or a result that person asked for. Never at night (00-07 in the person's own zone), never when they said they stepped away, at most once per quiet period; the master decides whether to write. Set the zone with `tldrq person --for NAME timezone Europe/Moscow` (unknown zone: no opener); change the dial with "initiative off|low|normal|high".
+
 ## [0.26.350] - 2026-10-25
 
 - When an agent is woken by a person's channel message and answers only in its terminal, it gets one private nudge right away to post its reply; if it still does not, its master gets a KPI line and the message is marked "unanswered" until an answer arrives. A reply or reaction to that exact message, or `tldrq channel receipt <channel> <seq> --outcome handoff|defer`, counts as answered. Terminal text is never copied into the channel any more: masters that relied on auto-forward now get nudged to post.
