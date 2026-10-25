@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.359] - 2026-10-25
+
+- A model's short rate limit (or "provider down") no longer sends a push notification; it stays on the member card. Pushes about model health are sent only when credentials are rejected and you need to act.
+
 ## [0.26.358] - 2026-10-25
 
 - A shell started before you log in now joins the web sessions list once you log in (the relay retries every 30 seconds instead of switching off for good), and the shell log says once why the relay is off (not logged in, certificate trust failure, ...), never with tokens or URLs.
