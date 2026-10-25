@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.347] - 2026-10-25
+
+- The [ ASK!ME ] button is gone from the bar. Say "grill me", "ask me about X" or "interview me" and the master runs the same decision interview through the new built-in enmaq/ask-me (the `tldrq askme` commands stay).
+
 ## [0.26.346] - 2026-10-25
 
 - New built-in enmaq/operating-model: one SkillPaq that explains end to end how work runs (request, ticket, one owner, workers and teams, who knows what, status, release), with every permission kept; nine overlapping packs are merged into it. Its short overview is in every primer, the sub-skills are read on demand.
