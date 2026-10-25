@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.350] - 2026-10-25
+
+- When an agent is woken by a person's channel message and answers only in its terminal, it gets one private nudge right away to post its reply; if it still does not, its master gets a KPI line and the message is marked "unanswered" until an answer arrives. A reply or reaction to that exact message, or `tldrq channel receipt <channel> <seq> --outcome handoff|defer`, counts as answered. Terminal text is never copied into the channel any more: masters that relied on auto-forward now get nudged to post.
+
 ## [0.26.349] - 2026-10-25
 
 - The web relay gets one session per tldrq shell a person started: only the Team's primary master dials; further master sessions in the same window no longer show up as extra rows.
