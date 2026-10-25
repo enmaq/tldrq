@@ -4,6 +4,14 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.346] - 2026-10-25
+
+- New built-in enmaq/operating-model: one SkillPaq that explains end to end how work runs (request, ticket, one owner, workers and teams, who knows what, status, release), with every permission kept; nine overlapping packs are merged into it. Its short overview is in every primer, the sub-skills are read on demand.
+- enmaq/human-rituals becomes enmaq/humans-rituals-and-psychology, learned from a week of real messages: answer a repeated ask first, keep ETAs, step-away and light moments, message gaps and stress signals; rules marked by evidence (one person, two people, general knowledge); dials for humor, honesty and initiative and a signals part as data.
+- scripts/humans-study: a repeatable, read-only study tool (prepare, model pass, merge with quote checks).
+- In the browser view: paste an image or drop files anywhere; they attach to the open thread or channel composer as a reference you send (4 MB cap, same as the terminal).
+- In the browser view, your messages show as a tinted card, agent messages stay plain, and existing buttons render as flat buttons.
+
 ## [0.26.345] - 2026-10-25
 
 - The built-in quick-status status format now leads with what is needed from the owner, gives evidence and what is not verified in every note, lists every release with its Pacific time from the release record, and ends with Facts and Corrections lines; customer-neutral wording.
