@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.354] - 2026-10-25
+
+- Clearing a Codex worker handles Codex's "Where should the new conversation run?" question: tldrq picks "Use current Git worktree" (never a new worktree), waits for the fresh prompt and then sends the setup once; no stray keys are left in the composer. An unconfirmed setup submission or a pasted setup left unsent is reported instead of retried blindly.
+
 ## [0.26.353] - 2026-10-25
 
 - A new tldrq release now counts as a reason for the master's "Worth opening?" opener after a long silence, if that channel has not been told about it yet. The release comes from the signed server list, never from the installed binary; each channel starts silently from the release current when it is first checked.
