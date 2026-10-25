@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.355] - 2026-10-25
+
+- After you rename a workspace, the web relay rows, the "Welcome back" title and the command palette show the new name (the stable id still routes everything underneath).
+
 ## [0.26.354] - 2026-10-25
 
 - Clearing a Codex worker handles Codex's "Where should the new conversation run?" question: tldrq picks "Use current Git worktree" (never a new worktree), waits for the fresh prompt and then sends the setup once; no stray keys are left in the composer. An unconfirmed setup submission or a pasted setup left unsent is reported instead of retried blindly.
