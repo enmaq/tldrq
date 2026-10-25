@@ -4,6 +4,11 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.356] - 2026-10-25
+
+- The bottom-bar traffic button reads [ Σ 12B · 2.2M/h ] (total, then the last hour), and UI-Level now sits before the idle time, in the same place whether idle shows 1m or 59m.
+- When several masters are mentioned on a human's request and the leading master answers, the advisors no longer get an "unanswered" nudge, KPI hit or badge. A request nobody answers still nudges its owner once.
+
 ## [0.26.355] - 2026-10-25
 
 - After you rename a workspace, the web relay rows, the "Welcome back" title and the command palette show the new name (the stable id still routes everything underneath).
