@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.366] - 2026-10-26
+
+- Bottom bar (UI1-5): the button cluster keeps its order and width budget at every level, and hover highlights the button under the mouse without hiding it (hover-safe guard, TQ-2-0320 follow-up).
+- Channel header: long workspace names ellipsize instead of the title dropping out at narrow widths (TQ-2-0326).
+- Release pack rule: proxy changes now require live provider turns through both transformed and pass-through paths with a receipt (lesson from TQ-2-0317).
+
 ## [0.26.365] - 2026-10-26
 
 - Claude sessions with protected SkillPaqs answer again: the proxy now adds pack rules after Claude Code's own system prompt instead of before it (every turn got `429 rate_limit_error` since 0.26.360).
