@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.365] - 2026-10-26
+
+- Claude sessions with protected SkillPaqs answer again: the proxy now adds pack rules after Claude Code's own system prompt instead of before it (every turn got `429 rate_limit_error` since 0.26.360).
+
 ## [0.26.364] - 2026-10-26
 
 - Human messages send again after a master/actor loss: a same-project sender keeps a retained proof instead of `sender rejected` (TQ-2-0321).
