@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.363] - 2026-10-26
+
+- Claude sessions with protected SkillPaqs work again: the proxy no longer drops `model` and other request fields when it adds pack rules (every turn failed with `400 model: Field required` since 0.26.360).
+
 ## [0.26.362] - 2026-10-25
 
 - `tldrq shell --profile sample`: Run is no longer blocked on small trial machines (capacity is a hint, as in the normal picker), and Advanced opens the normal picker instead of ending the session.
