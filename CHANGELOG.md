@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.364] - 2026-10-26
+
+- Human messages send again after a master/actor loss: a same-project sender keeps a retained proof instead of `sender rejected` (TQ-2-0321).
+- Bottom bar (UI1): First/Back/tabs/Next/Last stay one width-budgeted cluster in order, with working hover (TQ-2-0320).
+- Trial sample: the sample question is prefilled in the composer (never auto-sent), so Enter has something to send (TQ-2-0318).
+
 ## [0.26.363] - 2026-10-26
 
 - Claude sessions with protected SkillPaqs work again: the proxy no longer drops `model` and other request fields when it adds pack rules (every turn failed with `400 model: Field required` since 0.26.360).
