@@ -4,6 +4,11 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.369] - 2026-10-27
+
+- Channel header: the top thought flow is one line again, with a short snippet under each channel member's name, idle members included; it no longer joins fragments or shows help text (TQ-2-0334).
+- The bottom row above the composer shows "<name> is thinking…" for every busy channel member, including agents working on dispatched tasks, with no flow text (TQ-2-0334).
+
 ## [0.26.368] - 2026-10-26
 
 - Channel header: the roster keeps the same member names at every UI level, and the top thought flow is vertical and shows active agents only, at UI 4-5 (TQ-2-0326, TQ-2-0331).
