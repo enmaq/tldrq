@@ -4,6 +4,15 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.368] - 2026-10-26
+
+- Channel header: the roster keeps the same member names at every UI level, and the top thought flow is vertical and shows active agents only, at UI 4-5 (TQ-2-0326, TQ-2-0331).
+- Σ traffic button shows workspace traffic again when the session has no proxy of its own (TQ-2-0327).
+- The "no git remote.origin.url" warning no longer paints over the terminal; it goes to the quiet diagnostic log once (TQ-2-0328).
+- The false "master worked alone" alert in the human channel is gone (TQ-2-0329).
+- The row under the composer shows SEND · MULTILINE and every tab (Processes, Threads, Canvas, SkillPaq) with counts at every UI level 1-5 (TQ-2-0330).
+- `tldrq update` and the shell supervisor log one timing line per startup step in shell.log, so a slow restart can be traced (TQ-2-0332).
+
 ## [0.26.366] - 2026-10-26
 
 - Bottom bar (UI1-5): the button cluster keeps its order and width budget at every level, and hover highlights the button under the mouse without hiding it (hover-safe guard, TQ-2-0320 follow-up).
