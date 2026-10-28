@@ -4,6 +4,20 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.381] - 2026-10-28
+
+- Adding a master or worker to a Team now works after the original master has left and another master took over. The new member is onboarded by the master that is live now, not by the one that exited; if onboarding fails, the shell shows a Team onboarding notice instead of failing silently (TQ-2-0345 part 2).
+- Two CI-only test fixes for 0.26.379/0.26.380: the stuck-agent test checks that a held message arrives exactly once and only after recovery, and the peer-rescue test starts its own scratch proxy session. Known limit: Tribe Rescue can only send a step to a member that runs through the licensed proxy (TQ-2-0346).
+
+## [0.26.380] - 2026-10-28
+
+- Tribe Rescue: when a Team member is stuck, one healthy peer (preferably a master on another harness) claims the incident and runs `tldrq tribe rescue INCIDENT --step compact` (or `--step clear` after a failed compact). The stuck member's own tldrq checks the claim, runs the step once and returns a receipt; repeating the command returns the same receipt. New built-in SkillPaq enmaq/tribe-rescue tells the rescuer when to act and when only a human can help (login, update-required) (TQ-2-0344).
+
+## [0.26.379] - 2026-10-28
+
+- Tribe Pulse, part 1: an agent that fails the same way twice in a row (for example "Request too large") is noticed. tldrq holds new messages for it, so nothing is lost, tries `/compact` once and, if that fails, clears it into a fresh session with a short handoff of its role, Team, open work and held messages. Held messages are delivered after its first good turn. One notice in the human channel names the old and new session, sent when recovery ends or after 3 minutes (TQ-2-0343).
+- The Team gets one alert and you get one push per stuck member, however many sources (the proxy, the agent's own log) see the problem. Login errors alert after 2 failures in a row, rate limits and provider outages after 5; the proxy now records its own refusals. New built-in SkillPaq enmaq/tribe-pulse-rule (TQ-2-0344).
+
 ## [0.26.378] - 2026-10-28
 
 - Licensed Claude sessions no longer die once a conversation grows past 2 MB. The tldrq proxy refused such requests (Claude then showed "Request too large (max 32MB)" and /compact failed too); licensed requests now get the API's 32 MB ceiling. tldrq's own calls to its platform API from inside a licensed session are no longer refused with 403 (TQ-2-0343).
