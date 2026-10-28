@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.377] - 2026-10-28
+
+- Threads: an incoming agent reply no longer pulls your typing into its thread. On narrow terminals it shows as unread in the main chat; on wide ones the thread pane may reopen beside the chat, but your cursor stays where you were typing. Closing a thread also clears a leftover reply target, so the next main-chat message is not sent as a reply to an old message. Inside a thread, replies no longer repeat a "> #N" quote of the thread's first message or of the message right above; plain thread messages still go to the whole thread (TQ-2-0342).
+
 ## [0.26.376] - 2026-10-28
 
 - The grey thinking block under the chat shows the agent's own words, not scraps of its screen: tool runs, file reads, status rows, tips and timestamps are left out, words like "I'll" and non-English letters stay whole, and lines break between words instead of cutting them (TQ-2-0341).
