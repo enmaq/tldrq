@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.371] - 2026-10-28
+
+- Channel and thread: the bottom "is thinking…" row is replaced by a grey block above the composer, one column per busy agent, aligned with the header columns. Each column shows the agent's name and its last 3 thought-flow lines, scrolling up as new lines arrive. A column clears about 3 s after its agent goes idle or posts its reply, and the block takes no space when nobody is busy (TQ-2-0336).
+
 ## [0.26.370] - 2026-10-27
 
 - Browser (WUI): Bionic reading emphasis is off for now; the terminal keeps Bionic exactly as before, and authored bold text stays bold (TQ-2-0333).
