@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.378] - 2026-10-28
+
+- Licensed Claude sessions no longer die once a conversation grows past 2 MB. The tldrq proxy refused such requests (Claude then showed "Request too large (max 32MB)" and /compact failed too); licensed requests now get the API's 32 MB ceiling. tldrq's own calls to its platform API from inside a licensed session are no longer refused with 403 (TQ-2-0343).
+
 ## [0.26.377] - 2026-10-28
 
 - Threads: an incoming agent reply no longer pulls your typing into its thread. On narrow terminals it shows as unread in the main chat; on wide ones the thread pane may reopen beside the chat, but your cursor stays where you were typing. Closing a thread also clears a leftover reply target, so the next main-chat message is not sent as a reply to an old message. Inside a thread, replies no longer repeat a "> #N" quote of the thread's first message or of the message right above; plain thread messages still go to the whole thread (TQ-2-0342).
