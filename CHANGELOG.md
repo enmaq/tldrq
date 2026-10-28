@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.373] - 2026-10-28
+
+- Channel and thread: with a thread open, the grey thinking block is drawn once, inside the thread pane, instead of twice across the whole screen; it shows only busy agents, packed from the left, with no empty columns (TQ-2-0338).
+
 ## [0.26.372] - 2026-10-28
 
 - Channel and thread: messages you send to a busy agent collect in one "Queued · N additions" bubble above the composer. You can edit it (Save/Cancel) until it is sent; it goes out as one message when the agent is ready, survives a restart, and keeps its text if sending fails. Messages with @mentions or several recipients are still sent one by one; a Steer button is not included yet (TQ-2-0337).
