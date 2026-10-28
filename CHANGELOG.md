@@ -4,6 +4,18 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.376] - 2026-10-28
+
+- The grey thinking block under the chat shows the agent's own words, not scraps of its screen: tool runs, file reads, status rows, tips and timestamps are left out, words like "I'll" and non-English letters stay whole, and lines break between words instead of cutting them (TQ-2-0341).
+
+## [0.26.375] - 2026-10-28
+
+- Esc closes one thing at a time, innermost first: leave canvas editing, then close the canvas, then the thread, then the usual channel Esc. Drafts in the thread and the main chat are kept while panes close, and a maximized canvas closes in one step (TQ-2-0340).
+
+## [0.26.374] - 2026-10-28
+
+- `tldrq team run set-budget --moves N --tokens N` lets the coordinator raise a running iteration's move and token limits, so a busy night no longer runs out of moves; `complete` now succeeds once every item is accepted or cancelled; worker checkpoints reach the coordinator even while the round baton is elsewhere, with the worker's text intact (TQ-2-0339).
+
 ## [0.26.373] - 2026-10-28
 
 - Channel and thread: with a thread open, the grey thinking block is drawn once, inside the thread pane, instead of twice across the whole screen; it shows only busy agents, packed from the left, with no empty columns (TQ-2-0338).
