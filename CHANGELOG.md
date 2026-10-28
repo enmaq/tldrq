@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.370] - 2026-10-27
+
+- Browser (WUI): Bionic reading emphasis is off for now; the terminal keeps Bionic exactly as before, and authored bold text stays bold (TQ-2-0333).
+
 ## [0.26.369] - 2026-10-27
 
 - Channel header: the top thought flow is one line again, with a short snippet under each channel member's name, idle members included; it no longer joins fragments or shows help text (TQ-2-0334).
