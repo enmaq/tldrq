@@ -4,6 +4,34 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.384] - 2026-10-28
+
+- Your messages in a Team's human channel are sent at once again, named or not; nothing waits as "Queued" for a busy master. Every master gets them, and messages already stuck are released once. Masters are equal: every master is told to answer what is theirs or new, and none is told to stay silent (TQ-2-0348; regression since 0.26.372).
+- After a master hands over: the master that left gets no more wakes, your channel pane follows the master that is live now, and adding a member works (TQ-2-0345).
+- Tribe Rescue also works for a member that does not run through the licensed proxy, using the member's own wrapper evidence (TQ-2-0346).
+- Add-member dialog: the Worker/Master choice is clearly highlighted; built-in presets are just claude, codex --yolo and muse --yolo; Tab, Enter, Esc and arrows all work (TQ-2-0347).
+- The thought flow at the bottom types new text in letter by letter, also inside an open thread; names sit at the right of each column and are brighter; columns keep their order like a stack (TQ-2-0349).
+- The thought line under the Team header is off by default; the header keeps the title and member roster, and the bottom thought flow is unchanged (TQ-2-0355).
+- Closing and reopening a Team keeps every master: a master that exited during a handover stays in the saved Team (TQ-2-0345).
+- A member reopened with its Team keeps its saved launch command and resumes its own session; only a missing session starts fresh (TQ-2-0345).
+- The rows of the bottom thought flow are reserved above the composer, so the chat no longer jumps when someone starts or stops working (TQ-2-0357).
+- Older threads whose first message had no event id show all their replies again (TQ-2-0351).
+- The bottom tab bar gently pulses a tab while its terminal is working (idle tabs stay still; ~0.7% CPU while active) (TQ-2-0356).
+- Creating a Team with 2 or 3 selected models proposes that many masters (one per model) and as many workers; each built-in Team shows what it is for (TQ-2-0358).
+- "↓ latest" moved to the right end of the composer's top rail, so hover text and reactions no longer cover it (TQ-2-0350).
+- Adding a Master works again with the new built-in presets (claude, codex --yolo, muse --yolo); edited commands stay ineligible (TQ-2-0347).
+- A health check no longer starts recovery timers as a side effect; the reaper reconciles pending wakes (CI "database is locked" fix).
+- Channel replies no longer fail with "collector busy": the collector stopped re-reading the SkillPaq catalog for every message, and a busy reply is retried once without a duplicate (TQ-2-0354).
+
+## [0.26.383] - 2026-10-28
+
+- When a master leaves and another takes over, the Team no longer keeps waking the master that left: its pending wakes move to the successor (only messages the successor has not read) and it drops out of the live master list, while its history stays for audit. A wake that keeps failing still backs off instead of retrying every 30 seconds (TQ-2-0345 part 1).
+- Your human channel pane follows the master that took over: it reconnects as that master, shows new messages, and no longer stays bound to the master that left (TQ-2-0345 part 3).
+
+## [0.26.382] - 2026-10-28
+
+- Your messages in a Team's human channel are sent at once again. Since 0.26.372 the shell held an unaddressed message until the leading master was idle, so it sat as "Queued" while that master worked. Now it goes out immediately and every master in the Team gets it; messages already queued that way are released once. Messages addressed to one member still collect in the editable bubble while that member is busy (TQ-2-0348).
+
 ## [0.26.381] - 2026-10-28
 
 - Adding a master or worker to a Team now works after the original master has left and another master took over. The new member is onboarded by the master that is live now, not by the one that exited; if onboarding fails, the shell shows a Team onboarding notice instead of failing silently (TQ-2-0345 part 2).
