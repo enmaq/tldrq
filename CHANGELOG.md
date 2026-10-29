@@ -4,6 +4,17 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.389] - 2026-10-29
+
+- Switching to another window no longer wipes the message you are typing or closes the open thread: the terminal's focus report was read as Escape (TQ-2-0372).
+- Escape never clears a message you have typed; it only closes what is open (TQ-2-0375).
+- Only a message's header row carries its background tone, solid across the full width including the inline likes; the body keeps the plain background (TQ-2-0374).
+- The bottom bar is calmer: the member/channel switcher sits exactly in the centre with [ C Channels ] on its left and [ T Team ] on its right, Browser becomes [ B Web ] next to help, the workspace and your name are one button ([M1 tldrq.mann]) that keeps the same width on every tab, style and urgency show only their values, the copy glyph and all · separators are gone, there is no gap after the clock, and nothing drops the flag, workspace or urgency on a narrow screen (TQ-2-0376).
+- The logo cube in the bottom-left alternates enmaq blue and grey every 10 seconds (TQ-2-0376).
+- The dashed line at the top of a channel ripples once, briefly, when a message arrives or a member's state changes (TQ-2-0377).
+- The tldrq cloud shows every workspace with its project, e.g. enmaq/avatars-2, the same way everywhere; names that already include a project stay as typed (TQ-2-0378).
+- The "blocked by dialog" hint now names the exact call to see and answer the dialog.
+
 ## [0.26.388] - 2026-10-29
 
 - Bottom-bar member tabs always show their state colour: busy green (pulsing), idle grey, blocked or failed red with ⊘; quiet tabs no longer fade to the same grey (TQ-2-0370).
