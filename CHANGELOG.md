@@ -4,6 +4,18 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.387] - 2026-10-29
+
+- Much less CPU and disk reading on a busy machine: the collector no longer scans whole channel histories for notifications or skill formation on every message, each master shell keeps its workspace database open instead of reopening it every second, and the budget check skips reading when nothing changed. Built to stay bounded at millions of messages (TQ-2-0362).
+- Two more collector lookups (active work per member, duplicate event check) use indexes instead of reading message history (TQ-2-0362).
+- The channel screen is cleaner: the header row is gone (only the dashed line stays), [ T Team ] in the bottom bar replaces Workers and also offers Mission / run and Members, and the session time sits next to the clock (TQ-2-0369).
+- Your own messages and the team's have different background tones, and each sender keeps one name colour, in the terminal and in the browser (TQ-2-0365).
+- System references (message ids, thread links) are hidden at UI-Level 1-3 and pale at 4-5; links people type stay as written (TQ-2-0368).
+- The member roster row is gone from the header; bottom-bar tabs show busy, idle and blocked (⊘) for every member (TQ-2-0364).
+- The Team menu shows every item in full ("Pause / resume members" was cut off) (TQ-2-0369).
+- The workspace picker lists running workspaces first, then by last use (LAST USED) (TQ-2-0363).
+- Proposing an update to a built-in SkillPaq with a single-number version works again (TQ-2-0367).
+
 ## [0.26.386] - 2026-10-29
 
 - The collector no longer reads every pending message on each delivery poll: a recipient index turns an empty poll from ~2 MB of reads into a lookup (measured on a copy of a 706 MB database, the poll alone at 37 polls a second: 79 MB/s to under 1 KB/s of reads) (TQ-2-0362).
