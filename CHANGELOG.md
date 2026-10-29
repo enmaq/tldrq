@@ -4,6 +4,18 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.386] - 2026-10-29
+
+- The collector no longer reads every pending message on each delivery poll: a recipient index turns an empty poll from ~2 MB of reads into a lookup (measured on a copy of a 706 MB database, the poll alone at 37 polls a second: 79 MB/s to under 1 KB/s of reads) (TQ-2-0362).
+- Each master shell no longer re-reads the whole iteration outbox every 10 seconds to look for unsent results; an index covers only the unsent rows (TQ-2-0362).
+- With one busy member, the bottom thought flow also draws the right-hand line, like between columns (TQ-2-0361).
+- tldrq uses much less CPU while a Team is idle: finding a member's child processes no longer scans every process on the machine each second, the channel window redraws only when something changes, and the status bar repaints once a minute instead of every second (TQ-2-0359).
+- Anonymous usage counts for Tribe Pulse (incidents opened and resolved, rescue actions) are sent at most once an hour, compressed, with no user, machine or installation id. They follow the existing "Share usage" switch (on by default); turning it off stops sending and deletes what is pending (TQ-2-0353).
+
+## [0.26.385] - 2026-10-29
+
+- No user-facing changes (ticket text only).
+
 ## [0.26.384] - 2026-10-28
 
 - Your messages in a Team's human channel are sent at once again, named or not; nothing waits as "Queued" for a busy master. Every master gets them, and messages already stuck are released once. Masters are equal: every master is told to answer what is theirs or new, and none is told to stay silent (TQ-2-0348; regression since 0.26.372).
