@@ -4,6 +4,11 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.388] - 2026-10-29
+
+- Bottom-bar member tabs always show their state colour: busy green (pulsing), idle grey, blocked or failed red with ⊘; quiet tabs no longer fade to the same grey (TQ-2-0370).
+- A machine behind the licensed proxy shows Online in the tldrq cloud again: the proxy now lets through exactly this machine's authenticated bridge link to the configured platform; every other WebSocket stays blocked (TQ-2-0371).
+
 ## [0.26.387] - 2026-10-29
 
 - Much less CPU and disk reading on a busy machine: the collector no longer scans whole channel histories for notifications or skill formation on every message, each master shell keeps its workspace database open instead of reopening it every second, and the budget check skips reading when nothing changed. Built to stay bounded at millions of messages (TQ-2-0362).
