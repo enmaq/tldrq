@@ -4,6 +4,13 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.392] - 2026-10-30
+
+- `tldrq notifications send --urgency now|soon|quiet` marks how urgent a notification is. The server accepts it now; phones honour it once their receiving apps are updated. Without the flag nothing changes on the wire (TQ-2-0386).
+- In Claude sessions, tools that reach ordinary hosts (curl, go mod, npm, your own APIs) work again instead of getting 403: such traffic passes through untouched. Anthropic and Claude hosts keep the protected rules; bare IP addresses and other AI providers stay refused (TQ-2-0390).
+- Account memory (still switched off): an episode over 64 KiB is refused locally, and one rejected episode no longer drops the rest of its batch (TQ-2-0380).
+- Six slow terminal tests run in the integration job, so the unit test job stays well under its time limit (TQ-2-0389); the status-canvas tests no longer depend on where the temp folder is (TQ-2-0392).
+
 ## [0.26.391] - 2026-10-30
 
 - Claude sessions behind the licensed proxy no longer die on 401/403: the login refresh, claude.ai connectors (MCP, including artifacts), token counting and telemetry now pass through untouched. SkillPaq rules still reach every Claude conversation request, and other write calls (batches, the old completion API) are refused. Restart running Claude sessions after updating (TQ-2-0387).
