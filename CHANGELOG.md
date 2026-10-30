@@ -4,6 +4,14 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.391] - 2026-10-30
+
+- Claude sessions behind the licensed proxy no longer die on 401/403: the login refresh, claude.ai connectors (MCP, including artifacts), token counting and telemetry now pass through untouched. SkillPaq rules still reach every Claude conversation request, and other write calls (batches, the old completion API) are refused. Restart running Claude sessions after updating (TQ-2-0387).
+- A session that cannot rebind to Tribe Pulse logs it at most once a minute instead of several times a second (TQ-2-0387).
+- The built-in human-norms pack says when to push a phone notification: only a human decision or blocker, a requested production outcome, a verified finished request (once), or a stuck member the team cannot recover (TQ-2-0384).
+- `tldrq notifications send` works again for private manual notifications without loading the whole skill catalog (TQ-2-0384).
+- Account-memory groundwork (still switched off) drops broken episodes, keeps your workspace's memory under one stable id, and remembers memory opt-out per person (TQ-2-0380).
+
 ## [0.26.390] - 2026-10-30
 
 - Groundwork for account memory, switched off until the enmaq memory service is live: tldrq can send what happens in your channels to your account's memory, ask it from memory_search, and hand one short reminder to the agent a message was meant for. Nothing is recorded or sent yet; signing in also asks for a memory-only key, kept apart from your existing key (TQ-2-0380, TQ-2-0381).
