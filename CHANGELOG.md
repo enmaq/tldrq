@@ -4,6 +4,13 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.390] - 2026-10-30
+
+- Groundwork for account memory, switched off until the enmaq memory service is live: tldrq can send what happens in your channels to your account's memory, ask it from memory_search, and hand one short reminder to the agent a message was meant for. Nothing is recorded or sent yet; signing in also asks for a memory-only key, kept apart from your existing key (TQ-2-0380, TQ-2-0381).
+- Checks for each step of the memory path plus a replay of a real conversation, with and without memory (TQ-2-0382).
+- On phones the browser shell's font − / + really changes the text size (×1.5 up to ×4) with sideways scrolling, instead of being stuck at ×1 below 40 columns; desktop at ×1 renders exactly as before (TQ-2-0383).
+- Inside the enmaq Android app the browser shell can show Return and Close next to the size buttons, only after the app answers a strict handshake; an ordinary browser shows nothing new (TQ-2-0383).
+
 ## [0.26.389] - 2026-10-29
 
 - Switching to another window no longer wipes the message you are typing or closes the open thread: the terminal's focus report was read as Escape (TQ-2-0372).
