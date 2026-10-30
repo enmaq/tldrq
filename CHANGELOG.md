@@ -4,6 +4,23 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.395] - 2026-10-30
+
+0.26.394 was not released; its changes are included here.
+
+- When a Team join fails, the new agent no longer inherits its parent's identity. Busy joins retry for up to a minute before the agent starts; already affected sessions need restarting (TQ-2-0398).
+- Free masters cooperate on new human requests: the first thread reply owns the request or names one owner, and the others defer. If a request remains unanswered, reminders escalate to another master, preferring one who is free (TQ-2-0396).
+- Account memory keeps its own retry backoff when the server asks for a shorter delay, reducing repeated requests while the service is busy (TQ-2-0397).
+- Terminal checks follow the new coordinator after a master handoff instead of racing the old view (TQ-2-0399).
+- After you sign in and see the memory notice, channel messages are shared with your account memory so agents can recall them. Turn sharing off any time with `tldrq knowledge memory share off` (TQ-2-0380).
+- Idle terminals use less CPU, and opening the skill catalog avoids repeatedly rereading your personal profiles and skill packs (TQ-2-0394).
+- When the machine is overloaded, running sessions no longer disappear from the session list (TQ-2-0393).
+
+## [0.26.393] - 2026-10-30
+
+- Account-memory groundwork now uses the QISP episode format. Memory remains switched off; this update does not start recording or sending episodes (TQ-2-0391).
+- Real-terminal tests restore the UI level they change, and channel-send scaling checks tolerate scheduling noise under load while keeping their performance limits (TQ-2-0385).
+
 ## [0.26.392] - 2026-10-30
 
 - `tldrq notifications send --urgency now|soon|quiet` marks how urgent a notification is. The server accepts it now; phones honour it once their receiving apps are updated. Without the flag nothing changes on the wire (TQ-2-0386).
