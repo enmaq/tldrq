@@ -4,6 +4,14 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.396] - 2026-10-30
+
+- With usage sharing on, tldrq uploads pseudonymous token counts per installation (input, output and cache, per model, in time intervals); never prompts, responses or user identifiers. Sharing off sends nothing. Live upload to the dev service is still being proven (TQ-2-0400).
+- Adding a Team member no longer fails with "saved member missing" while the new tab is still joining, and a tab whose Team join failed can be removed: it closes locally instead of being refused as outside the Team. Members of other Teams stay protected (TQ-2-0401).
+- Restarting a worker keeps the model you chose instead of switching to the global default (TQ-2-0403).
+- `tldrq blueprint` and other graph lookups of callers are much faster on large indexes, so they no longer keep the machine busy (TQ-2-0405).
+- Starting a new Team no longer raises a false Tribe Pulse "not healthy" notice in its first two minutes; real provider failures still notify. Refused requests now name their endpoint, with identifiers removed (TQ-2-0406).
+
 ## [0.26.395] - 2026-10-30
 
 0.26.394 was not released; its changes are included here.
