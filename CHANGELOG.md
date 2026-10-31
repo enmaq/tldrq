@@ -4,6 +4,11 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.402] - 2026-10-31
+
+- A master who sends `tell` to an idle worker now sees a hint that a tell assigns no work and that `delegate` does, and the worker's card shows its last message was a tell. The tell is still delivered unchanged (TQ-2-0430).
+- `tldrq team run dispatch` no longer dead-ends with "assignee lacks a current charter readiness acknowledgement": the error names the `tldrq team run ready-ack` command, and a dispatch to a live worker waits for that ack and starts on it. Cancelling, reassigning or re-dispatching that waiting work returns its reserved budget (TQ-2-0431).
+
 ## [0.26.401] - 2026-10-31
 
 - Token counts are reported again while sessions from older tldrq versions still run on the same machine: the new counters keep their own local table, which older versions never clear, so they no longer erase each other's unsent counts (TQ-2-0429).
