@@ -4,6 +4,18 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.398] - 2026-10-31
+
+- Updating tldrq while sessions are running no longer breaks new agents with "proxy: local host did not become ready": a session always starts its proxy from the same build it runs, and a proxy that cannot start writes its reason to shell.log (TQ-2-0414).
+- An open channel uses less CPU while it redraws (TQ-2-0411).
+
+## [0.26.397] - 2026-10-31
+
+- Opening a channel shows the newest messages right away and loads older history in the background, instead of reading the whole history first (TQ-2-0410).
+- An open channel with nothing new uses less CPU: the loading animation stops once messages are shown, and colors are computed once (TQ-2-0394).
+- A Team master can add another master to its own Team, and a retried add with the same request id does not create a duplicate (TQ-2-0404).
+- Rare `tldrq blueprint` searches on very large indexes can use an optional extra index: build it once with `tldrq graph index --candidate-index` (about 0.5 GB on a 2-million-node graph). It is never built automatically (TQ-2-0405).
+
 ## [0.26.396] - 2026-10-30
 
 - With usage sharing on, tldrq uploads pseudonymous token counts per installation (input, output and cache, per model, in time intervals); never prompts, responses or user identifiers. Sharing off sends nothing. Live upload to the dev service is still being proven (TQ-2-0400).
