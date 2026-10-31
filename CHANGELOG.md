@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.401] - 2026-10-31
+
+- Token counts are reported again while sessions from older tldrq versions still run on the same machine: the new counters keep their own local table, which older versions never clear, so they no longer erase each other's unsent counts (TQ-2-0429).
+
 ## [0.26.400] - 2026-10-31
 
 - Signed-in accounts report token counts (input, output, cache reads and writes, per model) inside the existing usage-minutes upload: numbers and model names only, no extra requests; the separate token uploader is removed. Usage observed just before a session ends is kept for the next upload, a permanent token problem never blocks the minutes, and a missing SHELL no longer silently skips metering (TQ-2-0400).
