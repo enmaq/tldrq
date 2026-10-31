@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.400] - 2026-10-31
+
+- Signed-in accounts report token counts (input, output, cache reads and writes, per model) inside the existing usage-minutes upload: numbers and model names only, no extra requests; the separate token uploader is removed. Usage observed just before a session ends is kept for the next upload, a permanent token problem never blocks the minutes, and a missing SHELL no longer silently skips metering (TQ-2-0400).
+
 ## [0.26.399] - 2026-10-31
 
 - Account memory now starts for installs that signed in before 0.26.395: tldrq fetches the memory key once with your current sign-in, no new login needed, and `tldrq knowledge memory share` says why memory is off when it is (TQ-2-0416).
