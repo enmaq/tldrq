@@ -4,6 +4,14 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.399] - 2026-10-31
+
+- Account memory now starts for installs that signed in before 0.26.395: tldrq fetches the memory key once with your current sign-in, no new login needed, and `tldrq knowledge memory share` says why memory is off when it is (TQ-2-0416).
+- A fresh workspace with exactly one usable AI tool (for example only Muse) starts with it selected, so Enter forms a Team with channels instead of leaving only M1 (TQ-2-0419).
+- In a hosted cloud World, Login shows a device code in the tab to approve in your own browser, instead of opening a browser inside the cloud machine that stayed blank (TQ-2-0420).
+- When a session cannot start its proxy, the reason stays on screen and `tldrq shell` exits with an error instead of a blank screen and status 0 (TQ-2-0417).
+- The assistant list at start offers Ollama and LM Studio when they are installed, found at start with no network or downloads. Ollama opens `ollama run` with the first model your Ollama lists, using your own Ollama configuration (if it lists none, the tab says so and starts nothing); LM Studio opens `lms chat`. Both are plain model chats that run alone in the main tab and never form a Team. LM Studio Bionic is not offered: it is a desktop app with no terminal command (TQ-2-0421).
+
 ## [0.26.398] - 2026-10-31
 
 - Updating tldrq while sessions are running no longer breaks new agents with "proxy: local host did not become ready": a session always starts its proxy from the same build it runs, and a proxy that cannot start writes its reason to shell.log (TQ-2-0414).
