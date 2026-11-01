@@ -4,6 +4,25 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.406] - 2026-11-01
+
+- EARLY, PARTIAL: the browser view of `tldrq shell` has a new **Modern** skin, the default for new browsers (a skin you already chose is kept; **Raw** is today's terminal-cell view, unchanged). The toolbar reads Light/Dark, Skin, +, -; + and - resize the cells in Raw and the text in Modern. Modern draws natively: the canvas body, messages with reaction chips (click to react), thread and reply markers and #N anchors, and at 1024 px or wider the canvas and messages side by side. NOT yet native, still shown through the Terminal view: the canvas/thread tab strips, the composer's SEND/MULTILINE/Big text modes (a long draft can be cut off at phone width), the bottom bar and the status row, and the canvas diff/edit/clear controls. They follow in the next release (TQ-2-0443).
+- `tldrq shell --stop` names the workspace and sessions it stops, accepts `--workspace NAME`, and refuses with a list of live workspaces when several are live and none is named. The attached shell now ends with status 0 and a "stopped" line after a requested stop (TQ-2-0428, TQ-2-0422).
+- Tribe Pulse checks Codex quota once an hour from the local session logs, shows its schedule and last outcome in `tldrq collector status`, and sends one phone push when a limit is at 80% or projected to run out within 2 hours. Claude quota is reported as unknown (TQ-2-0444).
+- A built-in "engineering practices" pack collects the team's working rules; the existing rule packs point to it without growing the startup prompt (TQ-2-0439).
+
+## [0.26.405] - 2026-11-01
+
+- A running agent no longer loses its proxy connection ("ERR_PROXY_TUNNEL") because its heartbeat was late: a proxy session whose owning process is still alive is kept, and only sessions of exited processes expire (TQ-2-0441).
+- `tldrq blueprint` reads only node metadata instead of every stored source body, so it no longer grows to gigabytes on a large index. One-shot CLI calls such as `tldrq blueprint` stop their helper after 5 minutes (change it with `TLDRQ_MCP_CALL_TIMEOUT`), on Ctrl-C or when the caller exits, and say so with a non-zero exit (TQ-2-0442).
+- Idle sessions and channel windows use less CPU: the per-channel lookup that ran on every refresh now uses an index (CPU1581).
+- Agent memory is filed under the workspace the conversation happened in, so recall in that workspace finds it. Channels that cannot be matched to one workspace are skipped and counted instead of being filed under the wrong one. Recall reports why it returned nothing, without exposing any secret (TQ-2-0436).
+- An agent's model and effort no longer drift upward on their own: Tandem engineers start on Sol Medium, a model change is recorded only after the agent's own session confirms it, and a restore never starts an agent above its recorded model (TQ-2-0438).
+- Token counts are kept in memory and sent with the existing usage upload; the local token ledger is gone, so two tldrq versions on one machine can no longer erase each other's counts (TQ-2-0432).
+- The SIGUSR2 UI timing receipt now counts wakes per source and frames that repainted nothing, so the cause of idle redraws can be named from one capture (CPU1581).
+- Masters are no longer nudged about a "backgrounded command" while a worker's job is simply still running (TQ-2-0412).
+- Agent memory keeps only conversation: provider-health lines, Tribe Pulse events, system notices and wrapper commands such as /clear and /new are no longer stored as memories (TQ-2-0427).
+
 ## [0.26.404] - 2026-11-01
 
 - `tldrq notifications send` no longer times out while the machine is busy: it queues the push in the repository's channel log, which the collector delivers, and reports "notification queued (id X)", or a non-zero "queued, not delivered" with the reason when the push cannot reach your phone. `--id` makes a retry send the push only once (TQ-2-0440).
