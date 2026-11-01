@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.404] - 2026-11-01
+
+- `tldrq notifications send` no longer times out while the machine is busy: it queues the push in the repository's channel log, which the collector delivers, and reports "notification queued (id X)", or a non-zero "queued, not delivered" with the reason when the push cannot reach your phone. `--id` makes a retry send the push only once (TQ-2-0440).
+- After a Claude credit refill or an account switch, a human can resume every session stuck at the usage-limit screen in one step. The resume only works when a human triggered it, and it only continues a session whose screen shows a fresh cancellation above an empty input field (TQ-2-0437).
+- A coordinator can move a credit-blocked member's active work to another member with `tldrq team run credit-fallback --blocked H --reset R`, following an owner policy in `.tldrq/credit-fallback.json`. The policy is off when the file is missing, and the command never moves work to a stronger model than the blocked member had. One urgent notice names who is blocked, until when, and where the work continued (TQ-2-0437).
+
 ## [0.26.403] - 2026-11-01
 
 - The browser view of `tldrq shell` has an opt-in Phone skin: choose "Phone" in the skin selector to read canvases as documents and channel messages as readable text, page through history, switch tabs with real buttons and type in a native input field that edits the same draft as the terminal (Send shows "queued" once the outbox accepts it). A Native/Terminal switch keeps every terminal control reachable. Nothing changes unless you pick Phone; the terminal and the default browser view are unchanged (TQ-2-0434).
