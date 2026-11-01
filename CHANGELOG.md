@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.407] - 2026-11-01
+
+- HOTFIX: the Modern skin of the browser view now works for Team channels opened the normal way, which run as their own channel process. Before, such a channel showed "No native view is available yet" and no input field; now the browser reaches that channel's canvas, messages and composer through the existing authenticated parent-child link, with the same membership checks and edit confirmations. If the browser connects before the channel is ready, or the connection fails, it shows "unavailable" and a reopen of the browser view may be needed. Still NOT native in Modern (next release): the thread tab strip, the author on the first visible row, composer modes and draft height, the footer and status row, and canvas editing (TQ-2-0443).
+- Account memory recall now also works in channels where a message goes to several agents, such as a Team's main channel: exactly one agent receives the recall, the thread's owner or, failing that, the first master in roster order. Consent and membership checks are unchanged and nothing is broadcast (TQ-2-0446).
+- The built-in engineering-practices pack adds short rules for debugging and completion claims: rank hypotheses by the cost of a discriminating check, match evidence to the user's exact path and version, keep cause, change, test, deployment and user-visible success apart (TQ-2-0439).
+
 ## [0.26.406] - 2026-11-01
 
 - EARLY, PARTIAL: the browser view of `tldrq shell` has a new **Modern** skin, the default for new browsers (a skin you already chose is kept; **Raw** is today's terminal-cell view, unchanged). The toolbar reads Light/Dark, Skin, +, -; + and - resize the cells in Raw and the text in Modern. Modern draws natively: the canvas body, messages with reaction chips (click to react), thread and reply markers and #N anchors, and at 1024 px or wider the canvas and messages side by side. NOT yet native, still shown through the Terminal view: the canvas/thread tab strips, the composer's SEND/MULTILINE/Big text modes (a long draft can be cut off at phone width), the bottom bar and the status row, and the canvas diff/edit/clear controls. They follow in the next release (TQ-2-0443).
