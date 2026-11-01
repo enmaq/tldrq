@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.403] - 2026-11-01
+
+- The browser view of `tldrq shell` has an opt-in Phone skin: choose "Phone" in the skin selector to read canvases as documents and channel messages as readable text, page through history, switch tabs with real buttons and type in a native input field that edits the same draft as the terminal (Send shows "queued" once the outbox accepts it). A Native/Terminal switch keeps every terminal control reachable. Nothing changes unless you pick Phone; the terminal and the default browser view are unchanged (TQ-2-0434).
+- An idle session no longer allocates a 4 MiB buffer on every empty Claude log poll (CPU1504).
+- When a Claude session stops at its usage-limit screen (weekly or 5-hour limit, or "model requires usage credits"), its card shows `blocked: credit` and Tribe Pulse sends one urgent alert naming who is stuck, the limit or model and the reset time. No keys are pressed automatically yet (TQ-2-0437).
+
 ## [0.26.402] - 2026-10-31
 
 - A master who sends `tell` to an idle worker now sees a hint that a tell assigns no work and that `delegate` does, and the worker's card shows its last message was a tell. The tell is still delivered unchanged (TQ-2-0430).
