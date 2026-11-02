@@ -4,6 +4,11 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.411] - 2026-11-02
+
+- Modern skin: the canvas shows a native read-only Diff against the previous revision, with a Document button to switch back. Editing or clearing a canvas stays in the Terminal view, and the browser says so ("Edit or clear this canvas in Terminal.") (TQ-2-0443).
+- `test-quick.sh` no longer fails with "Argument list too long" on wide changes: it splits the selected tests into bounded chunks that each run once, and says plainly when a selection is too large (TQ-2-0449).
+
 ## [0.26.410] - 2026-11-02
 
 - Modern skin: a native footer under the composer with Refresh, Older, More new, Close canvas and a Terminal switch, plus live connection, read and send status. Remote buttons are disabled while disconnected and the draft is kept. Session-wide roster, usage and thinking status stay in the Terminal view (TQ-2-0443).
