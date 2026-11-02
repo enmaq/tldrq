@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.412] - 2026-11-02
+
+- Modern skin: you can edit and clear the open Markdown canvas natively. Edit canvas opens a draft that saves through the same writer as the terminal editor and shows the saved revision. Clear asks for confirmation and keeps anything a teammate added at the same time, or shows the canvas as unsaved. Other canvases, read-only canvases and unsupported formats still say to use the Terminal (TQ-2-0443).
+
 ## [0.26.411] - 2026-11-02
 
 - Modern skin: the canvas shows a native read-only Diff against the previous revision, with a Document button to switch back. Editing or clearing a canvas stays in the Terminal view, and the browser says so ("Edit or clear this canvas in Terminal.") (TQ-2-0443).
