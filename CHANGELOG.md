@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.414] - 2026-11-02
+
+- Start list: add your own harness with a name and the path to its executable or script ([+] Add harness). The path is used as one file, spaces included; an invalid path is reported and not saved. Saving does not start anything (TQ-2-0461).
+- Start list: OpenCode appears as the last entry when the `opencode` command is installed. The automatic Ollama and LM Studio entries are removed; add them as your own harness if you use them (TQ-2-0461).
+- Built-in team skill: masters restate the plan in their own words before parallel work so the leader can compare and correct (TQ-2-0459).
+
 ## [0.26.413] - 2026-11-02
 
 - Modern skin: a channel without an open canvas now shows its messages instead of "No native view is available yet". The terminal stays visible everywhere: parts tldrq can draw natively replace their own area, the rest is shown as the terminal draws it, and typing goes to the terminal. On a phone, the first tap sizes the terminal to the screen (TQ-2-0455).
