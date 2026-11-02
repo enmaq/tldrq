@@ -4,6 +4,11 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.413] - 2026-11-02
+
+- Modern skin: a channel without an open canvas now shows its messages instead of "No native view is available yet". The terminal stays visible everywhere: parts tldrq can draw natively replace their own area, the rest is shown as the terminal draws it, and typing goes to the terminal. On a phone, the first tap sizes the terminal to the screen (TQ-2-0455).
+- Big text can always be switched off: its toggle no longer disappears when the composer row is full (TQ-2-0456).
+
 ## [0.26.412] - 2026-11-02
 
 - Modern skin: you can edit and clear the open Markdown canvas natively. Edit canvas opens a draft that saves through the same writer as the terminal editor and shows the saved revision. Clear asks for confirmation and keeps anything a teammate added at the same time, or shows the canvas as unsaved. Other canvases, read-only canvases and unsupported formats still say to use the Terminal (TQ-2-0443).
