@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.408] - 2026-11-01
+
+- Modern skin: the thread strip is native (All threads, #N, close), stays visible while the messages scroll, and switches only what you read; the composer always shows where a message will go ("Replying in: #1"). The first visible message shows its author again, and the redundant Messages toggle is gone when canvas and messages are side by side. Still not native: composer modes, footer/status and canvas editing (next releases) (TQ-2-0443).
+- Masters are nudged once when a worker has been idle for 15 minutes while a planned, undispatched item names it as assignee (`tldrq team run add-work --assignee`); a paused run, a blocked item or a failed lookup stays quiet. `tldrq team kpi` shows a NUDGES column and `--rules` shows each rule's evaluations, matches, fires, accepted and failed sends, skip reasons and the detection cadence ("accepted" means the transport took the message, not that the master read it) (TQ-2-0447).
+- The built-in human-rituals pack tells agents to answer questions about the human from account memory first and cite the source, or say plainly that memory had nothing (TQ-2-0439).
+
 ## [0.26.407] - 2026-11-01
 
 - HOTFIX: the Modern skin of the browser view now works for Team channels opened the normal way, which run as their own channel process. Before, such a channel showed "No native view is available yet" and no input field; now the browser reaches that channel's canvas, messages and composer through the existing authenticated parent-child link, with the same membership checks and edit confirmations. If the browser connects before the channel is ready, or the connection fails, it shows "unavailable" and a reopen of the browser view may be needed. Still NOT native in Modern (next release): the thread tab strip, the author on the first visible row, composer modes and draft height, the footer and status row, and canvas editing (TQ-2-0443).
