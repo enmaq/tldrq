@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.410] - 2026-11-02
+
+- Modern skin: a native footer under the composer with Refresh, Older, More new, Close canvas and a Terminal switch, plus live connection, read and send status. Remote buttons are disabled while disconnected and the draft is kept. Session-wide roster, usage and thinking status stay in the Terminal view (TQ-2-0443).
+
 ## [0.26.409] - 2026-11-02
 
 - `tldrq team kpi` shows ACT-MIN: minutes from a nudge to the next direct message the master sends that worker (pending while unanswered, UNKNOWN if the worker stopped reporting). `--rules` adds per-rule last, count and average. It measures the first direct reply, not proof that the master acted (TQ-2-0447).
