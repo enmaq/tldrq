@@ -4,6 +4,11 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.409] - 2026-11-02
+
+- `tldrq team kpi` shows ACT-MIN: minutes from a nudge to the next direct message the master sends that worker (pending while unanswered, UNKNOWN if the worker stopped reporting). `--rules` adds per-rule last, count and average. It measures the first direct reply, not proof that the master acted (TQ-2-0447).
+- Modern skin: the composer's SEND, MULTILINE and Big text modes are native buttons that use the same actions as the terminal, and a long draft at phone width now grows instead of being cut off. The composer keeps showing its actual "Replying in" target. Still not native: the footer and status row and canvas editing (TQ-2-0443).
+
 ## [0.26.408] - 2026-11-01
 
 - Modern skin: the thread strip is native (All threads, #N, close), stays visible while the messages scroll, and switches only what you read; the composer always shows where a message will go ("Replying in: #1"). The first visible message shows its author again, and the redundant Messages toggle is gone when canvas and messages are side by side. Still not native: composer modes, footer/status and canvas editing (next releases) (TQ-2-0443).
