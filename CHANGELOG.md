@@ -4,6 +4,22 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.415] - 2026-11-02
+
+- Built-in Tribe Rescue guidance now covers a Codex worker rejected after a login because the background Codex daemon still holds a stale token: read the evidence, repair the daemon, then restart workers (TQ-2-0468).
+- Modern skin is the default for everyone, at zoom x1; a skin or zoom you pick afterwards is kept (TQ-2-0463).
+- Zoom +/- now resizes the terminal and the native text in Modern (TQ-2-0463).
+- Phone: when the on-screen keyboard closes, the area under it is redrawn right away (TQ-2-0464).
+- A master whose Team join succeeds now shows its granted role on its card instead of "worker" after a restart (TQ-2-0460).
+- Memory episodes carry their author, so recall can tell your own words from agent posts (TQ-2-0462).
+- Teams menu and start list show the same rows: your saved harnesses, OpenCode (when installed), then a blank line and [+] Add custom harness last. Each row launches its own command. Enter or a click on Add opens a two-step form (name, then path) with hints, and Esc returns to the menu (TQ-2-0461).
+- Teams menu and start list show "Claude · vLLM / Ollama / llama.cpp / LM Studio-compatible (model)" rows for local model servers that answer on this machine; picking one starts Claude pointed at that server with no keys to type (TQ-2-0466).
+- Local Claude rows start lean (Bash, Read, Edit, Write, ToolSearch; no auto-memory), skip permission prompts (Claude asks once per home folder to allow this), and size their context from the window the server actually loaded; when that window is unknown or small, the row says what to set (TQ-2-0466).
+- Local model faults show one plain line on the agent's card (server not reachable, prompt over the context window, wrong model or endpoint, broken stream, bad tool call) and one entry in ~/.tldrq/shell.log to attach to a report (TQ-2-0466).
+- Teams: pick Tandem, Eng team, Legal team or Medical team with any checked harness, including Eng, Legal or Medical teams of masters only; Tandem keeps one worker (TQ-2-0466).
+- When Create is refused, the message says why: the Team daemon is not reachable, another HOME's collector holds the ports, or this shell is a worker (TQ-2-0466).
+- Built-in team guidance: build the whole requested path so it runs locally, let the human check it by hand, and only after an explicit OK add tests and release (TQ-2-0467).
+
 ## [0.26.414] - 2026-11-02
 
 - Start list: add your own harness with a name and the path to its executable or script ([+] Add harness). The path is used as one file, spaces included; an invalid path is reported and not saved. Saving does not start anything (TQ-2-0461).
