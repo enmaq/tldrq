@@ -4,6 +4,10 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.26.416] - 2026-11-03
+
+- Hosted machines: when `TLDRQ_HOSTED_PROVIDERS` lists the providers you saved keys for (openai, anthropic, meta), the Teams menu, the start list, Add participant and the sample only offer and default to the matching agents (Codex, Claude, Muse). Without the setting nothing changes; your own, local and OpenCode entries are never hidden (TQ-2-0469).
+
 ## [0.26.415] - 2026-11-02
 
 - Built-in Tribe Rescue guidance now covers a Codex worker rejected after a login because the background Codex daemon still holds a stale token: read the evidence, repair the daemon, then restart workers (TQ-2-0468).
