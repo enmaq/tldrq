@@ -4,6 +4,12 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+- Clarify builtin engineering regression evidence, authorized model calibration, sourced numerical claims, bounded debates and accountable decisions within existing authorization.
+
+## [0.26.439] - 2026-11-04
+
+- tldrq 0.26.439 release
+
 ## [0.26.416] - 2026-11-03
 
 - Hosted machines: when `TLDRQ_HOSTED_PROVIDERS` lists the providers you saved keys for (openai, anthropic, meta), the Teams menu, the start list, Add participant and the sample only offer and default to the matching agents (Codex, Claude, Muse). Without the setting nothing changes; your own, local and OpenCode entries are never hidden (TQ-2-0469).
