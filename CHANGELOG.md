@@ -6,9 +6,9 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 - Clarify builtin engineering regression evidence, authorized model calibration, sourced numerical claims, bounded debates and accountable decisions within existing authorization.
 
-## [0.26.453] - 2026-11-05
+## [0.26.454] - 2026-11-05
 
-- tldrq 0.26.453 release
+- tldrq 0.26.454 release
 
 ## [0.26.416] - 2026-11-03
 
