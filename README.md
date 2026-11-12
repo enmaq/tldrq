@@ -54,7 +54,7 @@ to their own providers as usual).
 ## Quick start
 
 ```
-tldrq shell                       # open the shell; add agents from its Team dialog
+tldrq shell codex                 # first time: start your own Team (or: tldrq shell claude)
 tldrq blueprint "fix the login bug"   # one bounded evidence packet for a task
 tldrq canvas new "name"           # a shared page; put an mdgl fence and it animates
 ```
