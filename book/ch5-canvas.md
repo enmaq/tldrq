@@ -2,11 +2,14 @@
 
 Some things are easier drawn than said. A canvas is a live picture of
 the current state — a diagram, a plan, a sketch — that everyone in the
-team can see and edit:
+team can share and, when permitted, edit:
 
 ```sh
 tldrq canvas new "retry flow"
-tldrq canvas put 3 --text "client -> backoff -> server"
+# Replace 3 and 1 with your Canvas ID and its current revision.
+tldrq canvas show 3
+printf '%s\n' 'client -> backoff -> server' > retry-flow.md
+tldrq canvas put 3 --base 1 retry-flow.md
 tldrq canvas show 3
 ```
 

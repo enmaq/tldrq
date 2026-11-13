@@ -12,11 +12,15 @@ A code graph answers those questions directly:
 ```sh
 tldrq graph index --quiet
 tldrq graph search retryattempts
-tldrq graph impact retryattempts
+# Use the node ID returned by search:
+tldrq graph inspect NODE_ID
+tldrq graph impact NODE_ID
 ```
 
-Search finds the symbol. Impact shows who calls it and what depends on
-it. Now the agent knows the blast radius before typing a single edit.
+Search finds the symbol and its node ID. Impact shows indexed caller
+relationships and dependencies. Unresolved or missing edges still need
+checking before an edit. If a result belongs to another namespace, pass the
+returned namespace with `--namespace`.
 
 The rule for every change: start from the task, pull one small bounded
 packet of evidence — the symbols, their callers, the tests — and only

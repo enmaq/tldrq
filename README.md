@@ -15,19 +15,28 @@ make any one agent faster on its own.
 
 ## What's inside
 
-- **Channel + Team.** A human and any number of agents share one channel. Messages
-  route to the right agent, replies thread automatically, and nothing gets lost in
-  scrollback.
+- **Channel + Team.** A human and several agents share one channel. Messages
+  can be sent to named agents, with replies kept in threads. The Members dialog lets you
+  add a worker or master, remove workers, or make a master a worker while keeping
+  a master in charge.
 - **Threads.** Long conversations stay readable: grouped by age, searchable by exact
   phrase (root message or reply), with a short topic instead of whatever the first
   line happened to be.
 - **Canvas.** A shared page that plays [MDGL](https://github.com/enmaq/mdgl)
   animations in place — a flow, a state machine, a spinning diagram — and that a
   human can edit live, with a visible caret, while an agent watches the same page.
-- **Call-graph tools.** Static + dynamic call-graph analysis for Go,
-  TypeScript/JavaScript, C/C++, Python and Bash, plus searchable indexing of your
-  Markdown and plain-text docs — so an agent answers "where is X / who calls X /
-  what breaks if I change X" without `grep` + `read`.
+- **Call-graph tools.** Source-aware graph and code search for Go,
+  TypeScript/JavaScript, C/C++, Python and Bash, plus searchable Markdown and
+  plain-text docs. Static relationships show possible calls; runtime evidence
+  shows what an exercised path actually ran.
+- **Messages.** When signed in, talk to an online Team from Enmaq Messages in
+  your browser. The Team receives the request, its attachments
+  and available voice transcript, then answers in the same conversation or thread.
+  An online Team has a master running.
+- **SkillPaqs.** Reusable working rules for agents. Inspect and install packs,
+  or sign and publish your own.
+- **Support logs.** `tldrq logs collect` writes a local diagnostic text file with
+  known credential formats redacted. You choose whether to attach it in Messages.
 
 ## Videos
 
@@ -46,8 +55,8 @@ curl -fsSL "https://app.enmaq.com/api/v1/tldrq/install.sh?src=github" | sh
 ```
 
 Linux needs glibc 2.34+ (Ubuntu 22.04+, Debian 12+) — the installer checks before
-downloading and tells you plainly if your system is too old. macOS has no such
-floor. Sign in anytime after with `tldrq login`; a local Team with your
+downloading and tells you plainly if your system is too old.
+Sign in anytime after with `tldrq login`; a local Team with your
 own Claude or Codex agents works before that, with no account (your agents talk
 to their own providers as usual).
 
@@ -57,6 +66,14 @@ to their own providers as usual).
 tldrq shell codex                 # first time: start your own Team (or: tldrq shell claude)
 tldrq blueprint "fix the login bug"   # one bounded evidence packet for a task
 tldrq canvas new "name"           # a shared page; put an mdgl fence and it animates
+```
+
+After signing in, open **app.enmaq.com**, choose Messages, and select your online
+Team in the **To:** row. You can also send text from the terminal:
+
+```sh
+tldrq chat drop --text "Here is the result"
+tldrq chat drop --canvas 3        # use an existing Canvas ID to attach its card
 ```
 
 More at **app.enmaq.com**.
@@ -71,21 +88,43 @@ tldrq is a commercial product from a small team, so its source is closed for now
 
 What is open anyway:
 
-- **your data:** code graph, memories, canvases and SkillPaqs are plain files in your repo and home folder, readable and yours
-- **docs, changelog and file formats**
+- **your workspace data:** use the CLI to inspect the graph, canvases and installed
+  SkillPaqs; `tldrq graph export` writes a standalone HTML graph
+- **docs and changelog**
 - **MDGL**, our animation language, public on the package registries
 
 ## What tldrq connects to
 
-While you are logged out and working locally, tldrq makes no connections outside your machine. It contacts these only when you use the matching feature:
+The services used depend on the features you run:
 
-- **app.enmaq.com** and **api.enmaq.com**: only after you log in or use online features: login, licence, the update check (at most once a day, only while logged in), pack activation for encrypted packs, remote Teams, calls, and voice notifications if you set an API key. Requests to our hosts carry the tldrq version.
-- **GitHub** (the pack index and the pack file): only when you run pack commands.
+- **app.enmaq.com** and **api.enmaq.com**: sign-in, licence checks, updates,
+  online Teams, Messages, calls, pack downloads and configured voice features.
+  Hosted machines can check for and download updates before sign-in.
+  Requests to our hosts carry the tldrq version.
+- **Your machines:** while signed in, device details such as the machine's name,
+  the tldrq version and your workspace names are sent so your machines can be listed.
+- **Account memory:** after sign-in and a one-time notice, Team channel messages,
+  including their text and who wrote them, are sent to your account memory by
+  default. Turn off future channel capture with `tldrq knowledge memory share off`.
+- **Team progress in Messages:** member names and roles, busy state, short status
+  updates, and the names and versions of the Team's enabled SkillPaqs are sent to
+  show progress.
+- **Usage counts:** while signed in, agent time and token counts are sent for usage
+  accounting. Counts of how often each SkillPaq was loaded and applied, and
+  anonymous counts of agent failures and recoveries by agent type and kind, are
+  also sent. Turn those two off with `tldrq skillpaq usage off`.
+- **Startup errors:** if a Team or one of its agents fails to start while you
+  are signed in, a short error report can be sent: version, operating system,
+  the names of the Team setup, and the error with paths and recognized secrets removed.
+- **Pack sources, including GitHub**: fetching an index or pack when you use the
+  matching pack commands.
 - **api.anthropic.com**: only if you give tldrq your own `ANTHROPIC_API_KEY` for memory summaries (or a local model URL you configure).
-- **Your agents' own providers** (Anthropic, OpenAI, ...): called by your agents as usual, not by tldrq.
-- **ipapi.co**: only after `tldrq config geo on` (or a configured access region). Off by default.
+- **Your agents' own providers** (Anthropic, OpenAI, ...): your agents' requests go from your machine to their providers.
+- **ipapi.co**: only after `tldrq config geo on` (or a configured access region).
+  Off by default.
 
-No telemetry: we found no analytics or telemetry client in the source.
+`tldrq logs collect` creates its support file locally; it does not upload that
+file for you.
 
 ## License
 

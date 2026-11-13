@@ -7,9 +7,10 @@ file, it gets one composed packet for the task:
 tldrq blueprint "retry handling"
 ```
 
-The packet holds ranked symbols, reverse-call impact, reachable tests,
-and the exact commands to verify with. It is capped small on purpose:
-enough to act, too small to drown in.
+The packet can include ranked symbols, reverse-call impact, indexed tests
+and suggested verification commands. Its hints say when an index or test
+coverage is missing. It is capped small on purpose: enough to act, too
+small to drown in.
 
 Two principles make this work:
 
@@ -19,5 +20,6 @@ Two principles make this work:
   cost and error. Read them directly.
 - **Structure first, runtime second.** Most questions ("who calls this?",
   "what breaks if I change it?", "is this reachable?") are answered by
-  static analysis. Run code only for what static analysis cannot tell
-  you: timing, concurrency, real values.
+  static analysis. Those links describe possible calls, not proof that a
+  branch ran. Exercise code for actual paths, timing, concurrency and real
+  values.

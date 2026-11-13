@@ -5,10 +5,64 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 ## [Unreleased]
 
 - Clarify builtin engineering regression evidence, authorized model calibration, sourced numerical claims, bounded debates and accountable decisions within existing authorization.
+- The book uses a returned node ID with `graph impact` and a base revision and
+  file with `canvas put`; it distinguishes static relationships from runtime proof.
 
-## [0.26.587] - 2026-11-12
+## [0.26.588] - 2026-11-13
 
-- tldrq 0.26.587 release
+- tldrq 0.26.588 release
+
+## [0.26.584] - 2026-11-12
+
+This section collects the user-visible changes from 0.26.417 through 0.26.584.
+
+### Teams
+
+- The Members dialog combines the roster and actions: add a worker or master,
+  remove workers, pause or resume members, clear eligible workers, and make a
+  master a worker with a guard against removing the last master. Masters appear
+  in their saved order; loading no longer flashes an empty roster.
+- Starting a Team adapts to the agent tools you have installed and brings your
+  workers back when you reopen.
+- A Team shows as online only while at least one of its masters is running.
+  A manually assembled Team can receive Messages too.
+
+### Shell
+
+- `tldrq logs collect` creates one local support text file with version and system
+  information, recent logs and known credential formats redacted. It does not
+  upload the file automatically.
+- You can detach from a shell and come back to it. Restarting keeps your Team;
+  the help explains which unsaved work is lost.
+- Clicking prose or a code block opens a copy popup without hard-wrapped grid
+  lines. The browser popup supports clipboard copy; file paths open a preview.
+- Esc on a nonempty composer saves the cleared draft for Up to restore; a second
+  empty Esc closes the inner pane. Browser text spacing and side-pane fitting are
+  more predictable.
+
+### Chat and Messages
+
+- When signed in, you can address your Team by name in Messages and receive its
+  answer in the same thread. Requests include attachments and available
+  voice transcripts; replies show Team attribution and activity.
+- `chat drop` can post into a chosen thread and is safe to retry. File drops
+  stay in the thread you selected instead of appearing elsewhere.
+- `chat drop --canvas N` and `chat answer --canvas N` attach a pinned Canvas card;
+  an answer can combine text and a card.
+- Reactions reach the Team and can be sent back. Push links open the intended
+  message, and finished answers show a link back to Messages.
+
+### Install and update
+
+- The first-start instructions use `tldrq shell codex` or `tldrq shell claude`;
+  `--as` names a Team member, not a role. Starting in a new folder or under sudo
+  can find agent tools in their usual install locations.
+- Signing in from the web installer also signs in the CLI, and sign-ins stay
+  valid while you work.
+- Hosted machines can obtain updates without a user login. The built-in updater
+  continues to verify signed updates before replacing the binary.
+- You can publish signed SkillPaq packs, install a version you choose and share
+  packs with your organization.
 
 ## [0.26.416] - 2026-11-03
 
