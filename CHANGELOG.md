@@ -4,13 +4,14 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+- README demo films re-recorded on 0.26.601 (main tour and threads): one human room after Form team, scripted demo agents. No app changes.
 - Clarify builtin engineering regression evidence, authorized model calibration, sourced numerical claims, bounded debates and accountable decisions within existing authorization.
 - The book uses a returned node ID with `graph impact` and a base revision and
   file with `canvas put`; it distinguishes static relationships from runtime proof.
 
-## [0.26.603] - 2026-11-13
+## [0.26.604] - 2026-11-13
 
-- tldrq 0.26.603 release
+- tldrq 0.26.604 release
 
 ## [0.26.584] - 2026-11-12
 
