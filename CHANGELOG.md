@@ -9,9 +9,9 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 - The book uses a returned node ID with `graph impact` and a base revision and
   file with `canvas put`; it distinguishes static relationships from runtime proof.
 
-## [0.26.637] - 2026-11-15
+## [0.26.638] - 2026-11-16
 
-- tldrq 0.26.637 release
+- tldrq 0.26.638 release
 
 ## [0.26.584] - 2026-11-12
 
