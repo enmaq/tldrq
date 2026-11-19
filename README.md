@@ -72,8 +72,8 @@ After signing in, open **app.enmaq.com**, choose Messages, and select your onlin
 Team in the **To:** row. You can also send text from the terminal:
 
 ```sh
-tldrq chat drop --text "Here is the result"
-tldrq chat drop --canvas 3        # use an existing Canvas ID to attach its card
+tldrq chat drop --top-level --text "Here is the result"
+tldrq chat drop --top-level --canvas 3        # use an existing Canvas ID to attach its card
 ```
 
 More at **app.enmaq.com**.
