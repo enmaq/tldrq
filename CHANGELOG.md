@@ -9,9 +9,52 @@ User-facing changes only. The format follows [Keep a Changelog](https://keepacha
 - The book uses a returned node ID with `graph impact` and a base revision and
   file with `canvas put`; it distinguishes static relationships from runtime proof.
 
+## [0.26.733] - 2026-11-25
+
+- tldrq 0.26.733 release
+
 ## [0.26.732] - 2026-11-25
 
-- tldrq 0.26.732 release
+This section collects the user-visible changes since 0.26.730.
+
+### Sign-in and security
+
+- The default tldrq state folder `~/.tldrq` is created on the first command and readable only by you; if an existing one can be read by others, the background service logs a one-time warning.
+- A saved sign-in stays bound to the environment it was made for, and tldrq
+  refuses to send it to a different environment before any network request.
+- tldrq no longer looks for a local model on your network by default; set
+  `llm.local_url` in your tldrq config to use one.
+- Signing in creates a device key limited to voice features instead of an
+  organization API key.
+- `tldrq logout` revokes your voice key and ends this CLI session on the server
+  before it removes local credentials; when the server cannot confirm, it says
+  so and points to Settings → Security.
+- When the sign-in has already expired or ended elsewhere, logout prints one
+  plain line saying the key status could not be verified, instead of the raw
+  server reply.
+- Known: a sign-in made with an older version may have no server session; logout
+  then removes it locally only, and you can end all CLI sessions in
+  Settings → Security.
+
+### Teams
+
+- Delegated work counts as an instruction only when it comes from a verified
+  master of your own Team; delegated messages from other Teams, or from members
+  not yet restarted on this version, are shown as information.
+- A manually assembled Team recognizes its owner as master, so the owner can add
+  and start members.
+- A plain `tldrq shell` started from a terminal that belongs to a running Team
+  member shows the Welcome-back screen instead of attaching to the running Team.
+- The hint shown for a sender that is not an active Team member names the
+  correct join command.
+
+### Tools and memory
+
+- MCP tool results return file and message content exactly as stored, without
+  rewriting command names inside it.
+- Memory migration continues with a visible warning when the tldrq config file
+  cannot be read, and `tldrq config get` and `tldrq config set` name the file
+  that failed to parse.
 
 ## [0.26.584] - 2026-11-12
 
